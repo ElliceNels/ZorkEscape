@@ -1,9 +1,0 @@
-# ninja log v5
-0	342	7355883214787601	CMakeFiles/Practice.dir/new_zork/Character.cpp.obj	85c56364ba4da723
-36	662	7355883217966948	CMakeFiles/Practice.dir/new_zork/Command.cpp.obj	3fcfd1ae4dfb717b
-42	883	7355883220168971	CMakeFiles/Practice.dir/new_zork/item.cpp.obj	b91e05dadd075a69
-53	953	7355883220886404	CMakeFiles/Practice.dir/new_zork/Parser.cpp.obj	53c7a44028ec2152
-11	700	7355896375130680	CMakeFiles/Practice.dir/new_zork/Room.cpp.obj	934a901106d35633
-47	948	7355883220823506	CMakeFiles/Practice.dir/new_zork/CommandWords.cpp.obj	d1c95466acf74607
-3	567	7362620431415723	CMakeFiles/Practice.dir/new_zork/ZorkUL.cpp.obj	31ddbabddf41ee0f
-568	885	7362620434532932	Practice.exe	fe9ca6d0db9fb7b
