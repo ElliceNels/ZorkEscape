@@ -7,7 +7,7 @@
 				{
 					"build" : ".",
 					"hasInstallRule" : true,
-					"jsonFile" : "directory-.-Debug-f5d56886e7c435b83cff.json",
+					"jsonFile" : "directory-.-Debug-3b3af69de2b632aa8338.json",
 					"minimumCMakeVersion" : 
 					{
 						"string" : "3.5"
@@ -40,7 +40,7 @@
 				{
 					"directoryIndex" : 0,
 					"id" : "ZorkQt::@6890427a1f51a3e7e1df",
-					"jsonFile" : "target-ZorkQt-Debug-8701ccf960d274e9900b.json",
+					"jsonFile" : "target-ZorkQt-Debug-11449d0a1d1b1d005465.json",
 					"name" : "ZorkQt",
 					"projectIndex" : 0
 				}

@@ -1,10 +1,11 @@
 # ninja log v5
+691	867	7364238464296419	ZorkQt.exe	83f9ba1275c4941d
 0	252	7364232376834368	CMakeFiles/ZorkQt.dir/main.cpp.obj	3a65e2a361ad2874
-6	262	7364232376905281	CMakeFiles/ZorkQt.dir/Character.cpp.obj	fce8c87a8eb929f9
-12	640	7364232380741113	CMakeFiles/ZorkQt.dir/Command.cpp.obj	5878b6a65242a875
-23	941	7364232383721896	CMakeFiles/ZorkQt.dir/item.cpp.obj	3dcf721c776322cb
-39	996	7364232384309622	CMakeFiles/ZorkQt.dir/Parser.cpp.obj	d0be8124ef70e33
 32	1026	7364232384414082	CMakeFiles/ZorkQt.dir/CommandWords.cpp.obj	522fbda3443b719b
-48	1074	7364232385045688	CMakeFiles/ZorkQt.dir/ZorkUL.cpp.obj	452c52dd8155585
-17	1227	7364232386577369	CMakeFiles/ZorkQt.dir/Room.cpp.obj	83fdd42a6585d4af
-1229	1443	7364232388667518	ZorkQt.exe	83f9ba1275c4941d
+6	262	7364232376905281	CMakeFiles/ZorkQt.dir/Character.cpp.obj	fce8c87a8eb929f9
+39	996	7364232384309622	CMakeFiles/ZorkQt.dir/Parser.cpp.obj	d0be8124ef70e33
+12	640	7364232380741113	CMakeFiles/ZorkQt.dir/Command.cpp.obj	5878b6a65242a875
+9	567	7364238461379091	CMakeFiles/ZorkQt.dir/ZorkUL.cpp.obj	452c52dd8155585
+3	691	7364238462604183	CMakeFiles/ZorkQt.dir/Room.cpp.obj	83fdd42a6585d4af
+23	941	7364232383721896	CMakeFiles/ZorkQt.dir/item.cpp.obj	3dcf721c776322cb
+7	319	7364260033129096	ZorkQt.exe	d90dc8f6b65d6b38

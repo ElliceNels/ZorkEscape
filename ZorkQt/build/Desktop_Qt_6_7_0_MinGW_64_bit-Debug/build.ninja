@@ -49,12 +49,6 @@ cmake_ninja_workdir = C$:/Users/Ellice/ZorkEscape/ZorkQt/build/Desktop_Qt_6_7_0_
 
 build cmake_object_order_depends_target_ZorkQt: phony || CMakeFiles/ZorkQt.dir
 
-build CMakeFiles/ZorkQt.dir/main.cpp.obj: CXX_COMPILER__ZorkQt_unscanned_Debug C$:/Users/Ellice/ZorkEscape/ZorkQt/main.cpp || cmake_object_order_depends_target_ZorkQt
-  DEP_FILE = CMakeFiles\ZorkQt.dir\main.cpp.obj.d
-  FLAGS = -DQT_QML_DEBUG -g -std=gnu++17 -fdiagnostics-color=always
-  OBJECT_DIR = CMakeFiles\ZorkQt.dir
-  OBJECT_FILE_DIR = CMakeFiles\ZorkQt.dir
-
 build CMakeFiles/ZorkQt.dir/Character.cpp.obj: CXX_COMPILER__ZorkQt_unscanned_Debug C$:/Users/Ellice/ZorkEscape/ZorkQt/Character.cpp || cmake_object_order_depends_target_ZorkQt
   DEP_FILE = CMakeFiles\ZorkQt.dir\Character.cpp.obj.d
   FLAGS = -DQT_QML_DEBUG -g -std=gnu++17 -fdiagnostics-color=always
@@ -105,7 +99,7 @@ build CMakeFiles/ZorkQt.dir/ZorkUL.cpp.obj: CXX_COMPILER__ZorkQt_unscanned_Debug
 #############################################
 # Link the executable ZorkQt.exe
 
-build ZorkQt.exe: CXX_EXECUTABLE_LINKER__ZorkQt_Debug CMakeFiles/ZorkQt.dir/main.cpp.obj CMakeFiles/ZorkQt.dir/Character.cpp.obj CMakeFiles/ZorkQt.dir/Command.cpp.obj CMakeFiles/ZorkQt.dir/CommandWords.cpp.obj CMakeFiles/ZorkQt.dir/item.cpp.obj CMakeFiles/ZorkQt.dir/Parser.cpp.obj CMakeFiles/ZorkQt.dir/Room.cpp.obj CMakeFiles/ZorkQt.dir/ZorkUL.cpp.obj
+build ZorkQt.exe: CXX_EXECUTABLE_LINKER__ZorkQt_Debug CMakeFiles/ZorkQt.dir/Character.cpp.obj CMakeFiles/ZorkQt.dir/Command.cpp.obj CMakeFiles/ZorkQt.dir/CommandWords.cpp.obj CMakeFiles/ZorkQt.dir/item.cpp.obj CMakeFiles/ZorkQt.dir/Parser.cpp.obj CMakeFiles/ZorkQt.dir/Room.cpp.obj CMakeFiles/ZorkQt.dir/ZorkUL.cpp.obj
   FLAGS = -DQT_QML_DEBUG -g
   LINK_LIBRARIES = -lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32
   OBJECT_DIR = CMakeFiles\ZorkQt.dir
