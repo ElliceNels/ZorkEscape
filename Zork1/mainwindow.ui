@@ -1,0 +1,195 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>1288</width>
+    <height>762</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>MainWindow</string>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <property name="sizePolicy">
+    <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+     <horstretch>0</horstretch>
+     <verstretch>0</verstretch>
+    </sizepolicy>
+   </property>
+   <layout class="QGridLayout" name="gridLayout">
+    <item row="0" column="0">
+     <widget class="QStackedWidget" name="AllPages">
+      <property name="currentIndex">
+       <number>1</number>
+      </property>
+      <widget class="QWidget" name="page">
+       <widget class="QGraphicsView" name="graphicsView">
+        <property name="geometry">
+         <rect>
+          <x>50</x>
+          <y>40</y>
+          <width>1201</width>
+          <height>631</height>
+         </rect>
+        </property>
+       </widget>
+       <widget class="QGraphicsView" name="graphicsView_2">
+        <property name="geometry">
+         <rect>
+          <x>160</x>
+          <y>90</y>
+          <width>1001</width>
+          <height>511</height>
+         </rect>
+        </property>
+       </widget>
+       <widget class="QLabel" name="label">
+        <property name="geometry">
+         <rect>
+          <x>450</x>
+          <y>180</y>
+          <width>391</width>
+          <height>131</height>
+         </rect>
+        </property>
+        <property name="font">
+         <font>
+          <family>Tw Cen MT Condensed</family>
+          <pointsize>38</pointsize>
+         </font>
+        </property>
+        <property name="autoFillBackground">
+         <bool>true</bool>
+        </property>
+        <property name="text">
+         <string>Escape Zork Town</string>
+        </property>
+        <property name="alignment">
+         <set>Qt::AlignCenter</set>
+        </property>
+       </widget>
+       <widget class="QPushButton" name="pushButton">
+        <property name="geometry">
+         <rect>
+          <x>600</x>
+          <y>380</y>
+          <width>83</width>
+          <height>41</height>
+         </rect>
+        </property>
+        <property name="font">
+         <font>
+          <family>Tw Cen MT Condensed Extra Bold</family>
+          <pointsize>20</pointsize>
+         </font>
+        </property>
+        <property name="text">
+         <string>Play</string>
+        </property>
+       </widget>
+      </widget>
+      <widget class="QWidget" name="home2">
+       <property name="styleSheet">
+        <string notr="true">background-color: orange; color: white;</string>
+       </property>
+       <widget class="QGraphicsView" name="graphicsView_3">
+        <property name="geometry">
+         <rect>
+          <x>40</x>
+          <y>40</y>
+          <width>1181</width>
+          <height>631</height>
+         </rect>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">background-color: black; color: white;</string>
+        </property>
+       </widget>
+       <widget class="QLabel" name="label_2">
+        <property name="geometry">
+         <rect>
+          <x>350</x>
+          <y>100</y>
+          <width>591</width>
+          <height>181</height>
+         </rect>
+        </property>
+        <property name="font">
+         <font>
+          <pointsize>15</pointsize>
+         </font>
+        </property>
+        <property name="autoFillBackground">
+         <bool>false</bool>
+        </property>
+        <property name="text">
+         <string>You enter Zork Town. On entry you are kidnapped
+ by some men in grey suits. They 
+knock you out and when you wake up, you are
+in a room.</string>
+        </property>
+        <property name="alignment">
+         <set>Qt::AlignCenter</set>
+        </property>
+       </widget>
+       <widget class="QLabel" name="label_3">
+        <property name="geometry">
+         <rect>
+          <x>550</x>
+          <y>340</y>
+          <width>181</width>
+          <height>41</height>
+         </rect>
+        </property>
+        <property name="font">
+         <font>
+          <pointsize>10</pointsize>
+          <bold>true</bold>
+         </font>
+        </property>
+        <property name="autoFillBackground">
+         <bool>false</bool>
+        </property>
+        <property name="text">
+         <string>Your job is to escape</string>
+        </property>
+        <property name="alignment">
+         <set>Qt::AlignCenter</set>
+        </property>
+       </widget>
+       <widget class="QPushButton" name="pushButton_2">
+        <property name="geometry">
+         <rect>
+          <x>600</x>
+          <y>490</y>
+          <width>83</width>
+          <height>29</height>
+         </rect>
+        </property>
+        <property name="font">
+         <font>
+          <family>Tw Cen MT Condensed Extra Bold</family>
+         </font>
+        </property>
+        <property name="text">
+         <string>Continue</string>
+        </property>
+       </widget>
+      </widget>
+     </widget>
+    </item>
+   </layout>
+  </widget>
+ </widget>
+ <tabstops>
+  <tabstop>graphicsView</tabstop>
+  <tabstop>graphicsView_2</tabstop>
+  <tabstop>pushButton</tabstop>
+ </tabstops>
+ <resources/>
+ <connections/>
+</ui>
