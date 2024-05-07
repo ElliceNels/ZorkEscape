@@ -10,12 +10,16 @@ CONFIG += c++17
 
 SOURCES += \
     controller.cpp \
+    item.cpp \
     main.cpp \
-    mainwindow.cpp
+    mainwindow.cpp \
+    room.cpp
 
 HEADERS += \
     controller.h \
-    mainwindow.h
+    item.h \
+    mainwindow.h \
+    room.h
 
 FORMS += \
     mainwindow.ui
