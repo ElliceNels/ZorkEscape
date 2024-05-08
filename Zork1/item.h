@@ -4,6 +4,7 @@
 #include <string>
 #include "entity.h"
 
+//NAMESPACES
 using namespace std;
 class Item //: public Entity
 {
@@ -16,8 +17,14 @@ public:
 
     //void abstractMethod();
 
+    //OPERATOR OVERLOADING
+    bool operator==(const Item& item) const;
+
     inline int getId(){return id;}
     void setId(int id){this->id = id;}
+
+    inline string getName(){return name;}
+    void setName(string name){this->name = name;}
 };
 
 #endif // ITEM_H

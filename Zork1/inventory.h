@@ -12,12 +12,13 @@ private:
 public:
     Inventory();
 
-    void abstractMethod();
+//    void abstractMethod();
 
     vector<Item> getInventory(){return inventory;}
     void addToInventory(Item item);
     void removeFromInventory(Item item);
     bool isInInventory(Item item);
+    void printInventory();
 };
 
 #endif // INVENTORY_H
