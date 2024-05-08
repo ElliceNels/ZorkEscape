@@ -2,22 +2,22 @@
 #define ITEM_H
 
 #include <string>
+#include "entity.h"
 
 using namespace std;
-class Item
+class Item //: public Entity
 {
 private:
-    string name;
     int id;
+    string name;
 
 public:
     Item (int id, string name);
 
-    void setName();
-    string getName();
+    //void abstractMethod();
 
-    int getId();
-    void setId(int id);
+    inline int getId(){return id;}
+    void setId(int id){this->id = id;}
 };
 
 #endif // ITEM_H

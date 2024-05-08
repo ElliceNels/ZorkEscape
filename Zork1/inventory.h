@@ -3,15 +3,18 @@
 
 #include "item.h"
 #include <vector>
+#include "entity.h"
 
-class Inventory
+class Inventory //: public Entity
 {
 private:
     vector<Item> inventory;
 public:
     Inventory();
 
-    vector<Item> getInventory();
+    void abstractMethod();
+
+    vector<Item> getInventory(){return inventory;}
     void addToInventory(Item item);
     void removeFromInventory(Item item);
     bool isInInventory(Item item);

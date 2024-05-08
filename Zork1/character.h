@@ -4,20 +4,19 @@
 #include <string>
 #include "room.h"
 #include "inventory.h"
+#include "entity.h"
 
 using namespace std;
-class Character
+class Character //: public Entity
 {
 private:
-    string name;
     Room location;
     Inventory inventory;
 
 public:
     Character();
 
-    string getName();
-    void setName(string name);
+    void abstractMethod();
 
     Room getLocation();
     void setLocation(Room location);

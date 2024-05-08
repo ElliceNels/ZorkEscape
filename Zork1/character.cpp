@@ -1,3 +1,8 @@
-#include "character.h"
+// #include "character.h"
+// #include "iostream"
 
-Character::Character() {}
+// Character::Character() {}
+
+// //void abstractMethod() {
+// //    cout << "test abstract character" << endl;
+// //}

@@ -4,22 +4,21 @@
 #include "item.h"
 #include <vector>
 #include <map>
+#include "entity.h"
 
 using namespace std;
 
-class Room
+class Room //: public Entity
 {
 private:
     int roomId;
     vector<Item> itemsInRoom;
-    string description;
     map<string, Room*> exits;
 
 public:
     Room(int roomId, string description);
 
-    string getDescription();
-    void setDescription();
+    void abstractMethod();
 
     int getRoomId();
     void setRoomId(int roomId);
