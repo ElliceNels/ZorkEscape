@@ -8,16 +8,20 @@ int main(int argc, char *argv[])
     Item item1(1, "key1");
     Item item2(2, "key2");
 
-    Inventory vent;
-    vent.addToInventory(item1);
-    vent.addToInventory(item2);
+    Room rooma(2, "Room A");
+    Room roomb(3, "Room B");
+    Room roomc(4, "Room C");
 
-    vent.printInventory();
 
-    vent.removeFromInventory(item2);
+    rooma.getItemsInRoom();
 
-    vent.printInventory();
-    cout << vent.getInventory().size() << endl;
+    rooma.addItemToRoom(item1);
+
+    cout << rooma.getRoomId();
+
+    rooma.printItemsInRoom();
+
+    rooma.setExits(roomb, roomc, NULL, NULL);
 
 
 

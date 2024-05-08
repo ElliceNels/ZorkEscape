@@ -12,20 +12,26 @@ class Room //: public Entity
 {
 private:
     int roomId;
+    string description;
     vector<Item> itemsInRoom;
     map<string, Room*> exits;
 
 public:
     Room(int roomId, string description);
 
-    void abstractMethod();
+//    void abstractMethod();
 
-    int getRoomId();
-    void setRoomId(int roomId);
+    int getRoomId(){ return roomId;}
+    void setRoomId(int roomId){ this->roomId = roomId;}
 
-    vector<Item> getItemsInRoom();
+    map<string, Room*> getExits(){return exits;};
+    void setExits(Room *north, Room *east, Room *south, Room *west);
+
+    vector<Item> getItemsInRoom(){  return itemsInRoom;}
     void addItemToRoom(Item item);
-    void removeItemToRoom(Item item);
+    void removeItemFromRoom(Item item);
+
+    void printItemsInRoom();
 
 };
 
