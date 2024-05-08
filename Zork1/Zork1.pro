@@ -11,6 +11,7 @@ CONFIG += c++17
 SOURCES += \
     character.cpp \
     controller.cpp \
+    entity.cpp \
     inventory.cpp \
     item.cpp \
     main.cpp \
@@ -20,6 +21,7 @@ SOURCES += \
 HEADERS += \
     character.h \
     controller.h \
+    entity.h \
     inventory.h \
     item.h \
     mainwindow.h \

@@ -7,14 +7,14 @@ using namespace std;
 class Item
 {
 private:
-    string description;
+    string name;
     int id;
 
 public:
-    Item (string description);
+    Item (int id, string name);
 
-    void setDescription();
-    string getDescription();
+    void setName();
+    string getName();
 
     int getId();
     void setId(int id);
