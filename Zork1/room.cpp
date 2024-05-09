@@ -46,3 +46,8 @@ void Room::setExits(Room *north, Room *east, Room *south, Room *west){
         exits["west"] = west;
 } //implement
 
+void Room::printRoom() {
+    cout << "Room ID: " << roomId << endl;
+    cout << "Description: " << description << endl;
+}
+

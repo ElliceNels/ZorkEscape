@@ -32,6 +32,7 @@ public:
     void removeItemFromRoom(Item item);
 
     void printItemsInRoom();
+    void printRoom();
 
 };
 

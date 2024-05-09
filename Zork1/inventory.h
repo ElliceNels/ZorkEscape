@@ -4,10 +4,12 @@
 #include "item.h"
 #include <vector>
 #include "entity.h"
-
+class Character;
 class Inventory //: public Entity
 {
 private:
+    //FRIENDSHIP
+    friend class Character;
     vector<Item> inventory;
 public:
     Inventory();

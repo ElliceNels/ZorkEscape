@@ -10,10 +10,12 @@ Inventory::Inventory() {
 //}
 
 void Inventory:: addToInventory(Item item){
-    if (!isInInventory(item))
+    if (!isInInventory(item)) {
         inventory.push_back(item);
-    else
+        std::cout << "Item added to inventory." << std::endl;
+    }else {
         std::cout << "This is already in your inventory" << endl;
+    }
 }
 
 void Inventory:: removeFromInventory(Item item){
@@ -36,9 +38,14 @@ bool Inventory::isInInventory(Item item) {
 
 void Inventory:: printInventory(){
     // Output elements of the vector using an iterator
-    for (auto it = inventory.begin(); it != inventory.end(); ++it) {
-        std::cout << it->getName() << " " << endl;
-        std::cout << "Item ID: " << it->getId() << " " << endl;
+
+    if (inventory.empty()){
+        std::cout << "inventory is empty print" << endl;
+    }else {
+        for (auto it = inventory.begin(); it != inventory.end(); ++it) {
+            std::cout << it->getName() << " ";
+            std::cout << "Item ID: " << it->getId() << " " << endl;
+        }
     }
 
     std::cout << std::endl;

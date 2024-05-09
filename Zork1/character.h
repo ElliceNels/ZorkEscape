@@ -2,6 +2,7 @@
 #define CHARACTER_H
 
 #include <string>
+#include <utility>
 #include "room.h"
 #include "inventory.h"
 #include "entity.h"
@@ -10,7 +11,7 @@ using namespace std;
 class Character //: public Entity
 {
 private:
-    Room location;
+    Room *location;
     Inventory inventory;
 
 public:
@@ -18,11 +19,17 @@ public:
 
     void abstractMethod();
 
-    Room getLocation();
-    void setLocation(Room location);
+    inline Room* getLocation(){ return location;}
+    inline void setLocation(Room* location){this->location = location;}
 
-    Inventory getInventory();
-    void setInventory(Inventory inventory);
+    vector<Item> getInventory(){return inventory.inventory;};
+    void setInventory(Inventory inventory){ this->inventory = std::move(inventory);}
+
+
+    void addToInventory(Item item);
+    void removeFromInventory(Item item);
+    bool isInInventory(Item item);
+    void printInventory();
 
 };
 
