@@ -8,20 +8,20 @@ int main(int argc, char *argv[])
     Item item1(1, "key1");
     Item item2(2, "key2");
 
-    Room rooma(2, "Room A");
-    Room roomb(3, "Room B");
-    Room roomc(4, "Room C");
+    Room *rooma = new Room(2, "Room A");
+    Room *roomb = new Room(3, "Room B");
+    Room *roomc = new Room(4, "Room C");
 
 
-    rooma.getItemsInRoom();
+    rooma->getItemsInRoom();
 
-    rooma.addItemToRoom(item1);
+    rooma->addItemToRoom(item1);
 
-    cout << rooma.getRoomId();
+    cout << rooma->getRoomId();
 
-    rooma.printItemsInRoom();
+    rooma->printItemsInRoom();
 
-    rooma.setExits(roomb, roomc, NULL, NULL);
+    rooma->setExits(roomb , roomc, NULL, NULL);
 
 
 
