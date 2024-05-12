@@ -3,10 +3,11 @@
 
 #include <string>
 #include "entity.h"
+#include "Interactable.h"
 
 //NAMESPACES
 using namespace std;
-class Item //: public Entity
+class Item : public Interactable //: public Entity
 {
 private:
     int id;
@@ -25,6 +26,9 @@ public:
 
     inline string getName(){return name;}
     void setName(string name){this->name = name;}
+
+
+    void Move(Room* newLocation) override;
 };
 
 #endif // ITEM_H

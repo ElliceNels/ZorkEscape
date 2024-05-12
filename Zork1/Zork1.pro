@@ -19,6 +19,7 @@ SOURCES += \
     room.cpp
 
 HEADERS += \
+    Interactable.h \
     character.h \
     controller.h \
     entity.h \

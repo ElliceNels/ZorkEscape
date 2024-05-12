@@ -14,3 +14,7 @@ bool Item:: operator==(const Item& item) const {
     // Compare the names of 'this' and 'other' Item objects
     return this->name == item.name;
 }
+
+void Item::Move(Room* newLocation) {
+
+}

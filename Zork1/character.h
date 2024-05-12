@@ -8,10 +8,10 @@
 #include "entity.h"
 
 using namespace std;
-class Character //: public Entity
+// INHERITANCE
+class Character : public Interactable //: public Entity
 {
 private:
-    Room *location;
     Inventory inventory;
 
 public:
@@ -19,8 +19,6 @@ public:
 
     void abstractMethod();
 
-    inline Room* getLocation(){ return location;}
-    inline void setLocation(Room* location){this->location = location;}
 
     vector<Item> getInventory(){return inventory.inventory;};
     void setInventory(Inventory inventory){ this->inventory = std::move(inventory);}
@@ -30,6 +28,9 @@ public:
     void removeFromInventory(Item item);
     bool isInInventory(Item item);
     void printInventory();
+
+    void Move(Room* newLocation) override;
+
 
 };
 

@@ -49,3 +49,9 @@
      // Check if the value was found
      return (iterate != inventory.inventory.end());
  }
+
+ virtual void Character::Move(Room* newLocation) override{
+     setLocation(newLocation); //CONTINUE FROM HERE
+
+     cout << "Location Moved" << endl;
+}
