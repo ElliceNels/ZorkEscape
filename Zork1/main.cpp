@@ -11,6 +11,9 @@ int main(int argc, char *argv[])
     roomCreation();
     Character mainCharacter;
     mainCharacter.setLocation(globRooms[0]);
+    Room* r = mainCharacter.getLocation();
+    cout << r->getRoomId() << endl;
+
 
 //    QApplication a(argc, argv);
 //    MainWindow w;

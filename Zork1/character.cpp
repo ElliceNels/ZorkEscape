@@ -50,8 +50,7 @@
      return (iterate != inventory.inventory.end());
  }
 
- virtual void Character::Move(Room* newLocation) override{
-     setLocation(newLocation); //CONTINUE FROM HERE
-
+  void Character::Move(Room* newLocation) {
+     setLocation(newLocation);
      cout << "Location Moved" << endl;
 }

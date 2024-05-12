@@ -2,7 +2,7 @@
 #include <iostream>
 #include "room.h"
 
- Room::Room(int roomId, string description) {
+ Room::Room(int roomId, string name, string description) {
     this->roomId = roomId;
     this->description = description;
 }

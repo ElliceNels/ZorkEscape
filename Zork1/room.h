@@ -8,7 +8,7 @@
 
 using namespace std;
 
-class Room //: public Entity
+class Room : public Entity
 {
 private:
     int roomId;
@@ -17,7 +17,7 @@ private:
     map<string, Room*> exits;
 
 public:
-    Room(int roomId, string description);
+    Room(int roomId, string name, string description);
 
 //    void abstractMethod();
 
@@ -33,6 +33,10 @@ public:
 
     void printItemsInRoom();
     void printRoom();
+
+    virtual void printNameAndDescription() override;
+    //CONTINUE HERE
+
 
 };
 

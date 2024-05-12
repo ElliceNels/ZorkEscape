@@ -16,5 +16,8 @@ bool Item:: operator==(const Item& item) const {
 }
 
 void Item::Move(Room* newLocation) {
+    setLocation(newLocation);
+    cout << "Location Moved" << endl;
+
 
 }

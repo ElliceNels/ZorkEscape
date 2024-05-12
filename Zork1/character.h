@@ -29,7 +29,7 @@ public:
     bool isInInventory(Item item);
     void printInventory();
 
-    void Move(Room* newLocation) override;
+    void Move(Room* newLocation);
 
 
 };
