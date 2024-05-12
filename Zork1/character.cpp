@@ -3,7 +3,6 @@
 #include <algorithm>
 
  Character::Character() {
-    location = new Room(0, "Start Room");
     Inventory();
 }
 
@@ -43,4 +42,10 @@
      }
 
      std::cout << std::endl;
+ }
+
+ bool Character::isInInventory(Item item) {
+     auto iterate = std::find(inventory.inventory.begin(), inventory.inventory.end(), item);
+     // Check if the value was found
+     return (iterate != inventory.inventory.end());
  }
