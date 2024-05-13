@@ -1,7 +1,9 @@
 #ifndef CONTROLLER_H
 #define CONTROLLER_H
 
-class Controller
+#include "dialogue.h"
+
+class Controller : public Dialogue
 {
 public:
     Controller();

@@ -13,14 +13,12 @@ class Room : public Entity
 {
 private:
     int roomId;
-    std::string description;
     std::vector<Item> itemsInRoom;
     std::map<std::string, Room*> exits;
 
 public:
     Room(int roomId, std::string name, std::string description);
 
-//    void abstractMethod();
 
     int getRoomId(){ return roomId;}
     void setRoomId(int roomId){ this->roomId = roomId;}
@@ -33,10 +31,8 @@ public:
     void removeItemFromRoom(Item item);
 
     void printItemsInRoom();
-    void printRoom();
 
     virtual void printNameAndDescription() override;
-    //CONTINUE HERE
 
 
 };

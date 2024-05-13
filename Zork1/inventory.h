@@ -3,9 +3,9 @@
 
 #include "item.h"
 #include <vector>
-// #include "entity.h"
+
 class Character;
-class Inventory //: public Entity
+class Inventory
 {
 private:
     //FRIENDSHIP
@@ -13,8 +13,6 @@ private:
     std::vector<Item> inventory;
 public:
     Inventory();
-
-//    void abstractMethod();
 
     std::vector<Item> getInventory(){return inventory;}
     void addToInventory(Item item);

@@ -22,6 +22,7 @@ HEADERS += \
     Interactable.h \
     character.h \
     controller.h \
+    dialogue.h \
     entity.h \
     inventory.h \
     item.h \

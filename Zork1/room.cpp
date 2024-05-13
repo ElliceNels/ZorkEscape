@@ -4,7 +4,8 @@
 
  Room::Room(int roomId, string name, string description) {
     this->roomId = roomId;
-    this->description = description;
+    setName(name);
+    setDescription(description);
 }
 
  void Room::addItemToRoom(Item item){
@@ -26,9 +27,9 @@
 void Room:: printItemsInRoom(){
     // Output elements of the vector using an iterator
     for (auto it = itemsInRoom.begin(); it != itemsInRoom.end(); ++it) {
-        std::cout << it->getName() << " " << endl;
-        std::cout << "Item ID: " << it->getId() << " " << endl;
+        it->printNameAndDescription();
     }
+    cout << itemsInRoom.size() << " items in the " << getName() << endl;
 
     std::cout << std::endl;
 }
@@ -46,12 +47,8 @@ void Room::setExits(Room *north, Room *east, Room *south, Room *west){
         exits["west"] = west;
 } //implement
 
-void Room::printRoom() {
-    cout << "Room ID: " << roomId << endl;
-    cout << "Description: " << description << endl;
-}
 
 void Room:: printNameAndDescription(){
-    cout << "slay" << endl;
+    cout << "Room - " << getName() << ": " << getDescription() << endl;
 }
 

@@ -13,10 +13,10 @@ private:
 public:
     virtual void printNameAndDescription() = 0;
 
-    string getName();
+    string getName(){return name;};
     void setName(string name);
 
-    string getDescription();
+    string getDescription(){return description;};
     void setDescription(string description);
 };
 

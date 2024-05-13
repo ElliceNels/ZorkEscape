@@ -5,9 +5,6 @@
 Inventory::Inventory() {
 }
 
-//void abstractMethod() {
-//    cout << "test abstract inventory" << endl;
-//}
 
 void Inventory:: addToInventory(Item item){
     if (!isInInventory(item)) {

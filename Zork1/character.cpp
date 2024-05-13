@@ -1,5 +1,5 @@
 #include "character.h"
- #include <iostream>
+#include <iostream>
 #include <algorithm>
 
  Character::Character() {
@@ -10,10 +10,6 @@
      // Accessing the private member items of the Inventory class directly
      inventory.inventory.push_back(item);
  }
-
-// //void abstractMethod() {
-// //    cout << "test abstract character" << endl;
-// //}
 
 
  void Character:: removeFromInventory(Item item){
@@ -53,3 +49,7 @@
      setLocation(newLocation);
      cout << "Location Moved" << endl;
 }
+
+  void Character:: printNameAndDescription(){
+      cout << "Character - " << getName() << ": " << getDescription() << endl;
+  }

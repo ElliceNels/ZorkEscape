@@ -8,16 +8,14 @@
 class Room;
 //NAMESPACES
 using namespace std;
-class Item : public Interactable //: public Entity
+//MULTIPLE INHERITANCE
+class Item : public Interactable,  public Entity
 {
 private:
     int id;
-    string name;
 
 public:
-    Item (int id, string name);
-
-    //void abstractMethod();
+    Item (int id, string name, string description);
 
     //OPERATOR OVERLOADING
     bool operator==(const Item& item) const;
@@ -25,11 +23,10 @@ public:
     inline int getId(){return id;}
     void setId(int id){this->id = id;}
 
-    inline string getName(){return name;}
-    void setName(string name){this->name = name;}
-
 
     void Move(Room* newLocation) override;
+
+    virtual void printNameAndDescription() override;
 };
 
 #endif // ITEM_H

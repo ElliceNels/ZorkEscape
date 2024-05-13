@@ -8,7 +8,7 @@
 class Room;
 using namespace std;
 // INHERITANCE
-class Character : public Interactable //: public Entity
+class Character : public Interactable, public Entity
 {
 private:
     Inventory inventory;
@@ -28,7 +28,9 @@ public:
     bool isInInventory(Item item);
     void printInventory();
 
-    void Move(Room* newLocation);
+    void Move(Room* newLocation) override;
+
+    virtual void printNameAndDescription() override;
 
 
 };
