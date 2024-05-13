@@ -1,5 +1,5 @@
- #include "character.h"
- #include "iostream"
+#include "character.h"
+ #include <iostream>
 #include <algorithm>
 
  Character::Character() {
@@ -36,7 +36,6 @@
          std::cout << "Inventory is empty" << endl;
      }else {
          for (auto it = inventory.inventory.begin(); it != inventory.inventory.end(); ++it) {
-             std::cout ;
              std::cout << "Item ID: " << it->getId() << ", '" <<  it->getName() << "' " << endl;
          }
      }

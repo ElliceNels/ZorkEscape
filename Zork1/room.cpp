@@ -51,3 +51,7 @@ void Room::printRoom() {
     cout << "Description: " << description << endl;
 }
 
+void Room:: printNameAndDescription(){
+    cout << "slay" << endl;
+}
+

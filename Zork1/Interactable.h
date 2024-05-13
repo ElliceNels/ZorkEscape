@@ -1,8 +1,7 @@
 #ifndef INTERACTABLE_H
 #define INTERACTABLE_H
 
-#include "room.h"
-
+class Room;
 //ABSTRACT CLASS
 class Interactable {
 private:

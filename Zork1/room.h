@@ -1,23 +1,24 @@
 #ifndef ROOM_H
 #define ROOM_H
 
-#include "item.h"
 #include <vector>
 #include <map>
-#include "entity.h"
+#include "string"
+#include "item.h"
 
-using namespace std;
+class Entity;
+
 
 class Room : public Entity
 {
 private:
     int roomId;
-    string description;
-    vector<Item> itemsInRoom;
-    map<string, Room*> exits;
+    std::string description;
+    std::vector<Item> itemsInRoom;
+    std::map<std::string, Room*> exits;
 
 public:
-    Room(int roomId, string name, string description);
+    Room(int roomId, std::string name, std::string description);
 
 //    void abstractMethod();
 
@@ -27,7 +28,7 @@ public:
     map<string, Room*> getExits(){return exits;};
     void setExits(Room *north, Room *east, Room *south, Room *west);
 
-    vector<Item> getItemsInRoom(){  return itemsInRoom;}
+    std::vector<Item> getItemsInRoom(){  return itemsInRoom;}
     void addItemToRoom(Item item);
     void removeItemFromRoom(Item item);
 

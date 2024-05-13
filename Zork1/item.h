@@ -4,7 +4,8 @@
 #include <string>
 #include "entity.h"
 #include "Interactable.h"
-
+// #include "character.h"
+class Room;
 //NAMESPACES
 using namespace std;
 class Item : public Interactable //: public Entity

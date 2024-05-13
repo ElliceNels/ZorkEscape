@@ -1,12 +1,11 @@
 #ifndef CHARACTER_H
 #define CHARACTER_H
 
-#include <string>
-#include <utility>
-#include "room.h"
 #include "inventory.h"
-#include "entity.h"
+// #include "entity.h"
+#include "Interactable.h"
 
+class Room;
 using namespace std;
 // INHERITANCE
 class Character : public Interactable //: public Entity
