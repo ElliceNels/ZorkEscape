@@ -27,4 +27,6 @@ add_executable(Zork1
         mainwindow.cpp
         mainwindow.h
         room.cpp
-        room.h)
+        room.h
+        model.h
+        model.cpp)

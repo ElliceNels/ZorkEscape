@@ -1,9 +1,11 @@
 #include "item.h"
 #include <iostream>
-Item::Item(int id, string name, string description) {
+Item::Item(int id, string name, string description, Room* location) {
     this->id = id;
+    this->location = location;
     setName(name);
     setDescription(description);
+
 }
 
 //void abstractMethod() {

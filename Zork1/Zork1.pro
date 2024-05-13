@@ -16,6 +16,7 @@ SOURCES += \
     item.cpp \
     main.cpp \
     mainwindow.cpp \
+    model.cpp \
     room.cpp
 
 HEADERS += \
@@ -27,6 +28,7 @@ HEADERS += \
     inventory.h \
     item.h \
     mainwindow.h \
+    model.h \
     room.h
 
 FORMS += \

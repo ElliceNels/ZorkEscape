@@ -13,9 +13,10 @@ class Item : public Interactable,  public Entity
 {
 private:
     int id;
+    Room* location;
 
 public:
-    Item (int id, string name, string description);
+    Item (int id, string name, string description, Room* location);
 
     //OPERATOR OVERLOADING
     bool operator==(const Item& item) const;
