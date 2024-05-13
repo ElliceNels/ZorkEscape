@@ -10,7 +10,6 @@ CONFIG += c++17
 
 SOURCES += \
     character.cpp \
-    controller.cpp \
     entity.cpp \
     inventory.cpp \
     item.cpp \
@@ -22,7 +21,6 @@ SOURCES += \
 HEADERS += \
     Interactable.h \
     character.h \
-    controller.h \
     dialogue.h \
     entity.h \
     inventory.h \

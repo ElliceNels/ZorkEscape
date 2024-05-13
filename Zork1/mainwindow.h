@@ -3,6 +3,8 @@
 
 #include <QMainWindow>
 #include<QStackedWidget>
+#include "dialogue.h"
+#include "model.h"
 
 QT_BEGIN_NAMESPACE
 namespace Ui {
@@ -10,7 +12,7 @@ class MainWindow;
 }
 QT_END_NAMESPACE
 
-class MainWindow : public QMainWindow
+class MainWindow : public QMainWindow, public Dialogue
 {
     Q_OBJECT
 
@@ -23,5 +25,6 @@ private slots:
 
 private:
     Ui::MainWindow *ui;
+    Model model;
 };
 #endif // MAINWINDOW_H
