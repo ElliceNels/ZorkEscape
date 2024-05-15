@@ -20,9 +20,9 @@ public:
         return failedDoorAccess;
     }
 
-    string getEnterRoom(){
-        return enterRoom;
-    }
+    // string getEnterRoom(int itemsInRoom){
+    //     return enterRoom + "\nThere are " + itemsInRoom + " items in the room";
+    // }
 
     string getItemPickUp(){
         return itemPickUp;

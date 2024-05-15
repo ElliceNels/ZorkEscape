@@ -18,10 +18,24 @@ class MainWindow : public QMainWindow, public Dialogue
 
 public:
     MainWindow(QWidget *parent = nullptr);
+    QStackedWidget *AllPages;
     ~MainWindow();
+    void initiateGame();
+    void roomCreation();
+    void fillRooms();
+    void itemCreation();
 
 private slots:
     void on_pushButton_clicked();
+
+    void on_continueButton_clicked();
+
+    void on_label_8_customContextMenuRequested(const QPoint &pos);
+
+    void on_PlayButton_clicked();
+
+    void on_ArrowLeft_linkActivated(const QString &link);
+
 
 private:
     Ui::MainWindow *ui;

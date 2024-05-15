@@ -3,7 +3,7 @@
 #include <algorithm>
 
 Model::Model() {
-    currentRoomIndex = 3;
+    currentRoomIndex = 2;
 }
 
 void Model::addItem(Item newItem) {

@@ -1,0 +1,10 @@
+<RCC>
+    <qresource prefix="/images">
+        <file>BACKGROUND.png</file>
+        <file>ARROW-UP.png</file>
+        <file>ARROW-DOWN.png</file>
+        <file>ARROW-LEFT.png</file>
+        <file>ARROW-RIGHT.png</file>
+        <file>CHARACTER.png</file>
+    </qresource>
+</RCC>

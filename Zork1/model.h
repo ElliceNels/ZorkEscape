@@ -2,12 +2,13 @@
 #define MODEL_H
 
 #include "character.h"
-extern Room* globRooms;
+extern Room* globRooms[11];
 class Model
 {
 private:
     Character character;
     vector<Item> allItems;
+    Room* globRooms;
     int currentRoomIndex;
 
 public:

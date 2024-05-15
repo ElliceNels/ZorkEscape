@@ -13,6 +13,7 @@ SOURCES += \
     entity.cpp \
     inventory.cpp \
     item.cpp \
+    location.cpp \
     main.cpp \
     mainwindow.cpp \
     model.cpp \
@@ -25,6 +26,7 @@ HEADERS += \
     entity.h \
     inventory.h \
     item.h \
+    location.h \
     mainwindow.h \
     model.h \
     room.h
@@ -36,3 +38,10 @@ FORMS += \
 qnx: target.path = /tmp/$${TARGET}/bin
 else: unix:!android: target.path = /opt/$${TARGET}/bin
 !isEmpty(target.path): INSTALLS += target
+
+DISTFILES += \
+    ARROW.png \
+    Background.webp
+
+RESOURCES += \
+    resource.qrc

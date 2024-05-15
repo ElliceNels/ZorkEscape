@@ -2,8 +2,8 @@
 #include <iostream>
 #include "room.h"
 
- Room::Room(int roomId, string name, string description) {
-    this->roomId = roomId;
+ // INITIALISER LIST
+ Room::Room(int roomId, string name, string description) : roomId(roomId){
     setName(name);
     setDescription(description);
 }
