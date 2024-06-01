@@ -50,6 +50,6 @@
      cout << "Location Moved" << endl;
 }
 
-  void Character:: printNameAndDescription(){
+  string Character:: printNameAndDescription(){
       cout << "Character - " << getName() << ": " << getDescription() << endl;
   }

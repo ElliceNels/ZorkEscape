@@ -24,14 +24,20 @@
      }
  }
 
-void Room:: printItemsInRoom(){
+string Room:: printItemsInRoom(){
     // Output elements of the vector using an iterator
     for (auto it = itemsInRoom.begin(); it != itemsInRoom.end(); ++it) {
         it->printNameAndDescription();
     }
-    cout << itemsInRoom.size() << " items in the " << getName() << endl;
+    return std::to_string(itemsInRoom.size()) + " items in the " + getName(); //fix get name
+}
 
-    std::cout << std::endl;
+string Room::printRoomItemDetails(){
+    string totalText = "";
+    for (auto it = itemsInRoom.begin(); it != itemsInRoom.end(); ++it) {
+        totalText = totalText + it->printNameAndDescription();
+    }
+    return totalText;
 }
 
 
@@ -48,7 +54,9 @@ void Room::setExits(Room *north, Room *east, Room *south, Room *west){
 } //implement
 
 
-void Room:: printNameAndDescription(){
-    cout << "Room - " << getName() << ": " << getDescription() << endl;
+string Room:: printNameAndDescription(){
+    return "Room - " + getName() + ": " + getDescription();
 }
+
+
 

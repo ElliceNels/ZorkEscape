@@ -1,3 +1,0 @@
-C:/Users/Ellice/ZorkEscape/Zork1/cmake-build-debug/CMakeFiles/Zork1.dir
-C:/Users/Ellice/ZorkEscape/Zork1/cmake-build-debug/CMakeFiles/edit_cache.dir
-C:/Users/Ellice/ZorkEscape/Zork1/cmake-build-debug/CMakeFiles/rebuild_cache.dir

@@ -30,7 +30,7 @@ public:
 
     void Move(Room* newLocation) override;
 
-    virtual void printNameAndDescription() override;
+    virtual string printNameAndDescription() override;
 
 
 };

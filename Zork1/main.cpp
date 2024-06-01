@@ -3,7 +3,7 @@
 #include "character.h"
 #include <QApplication>
 
-Room *globRooms[11];
+Room *globRooms[6];
 
 int main(int argc, char *argv[])
 {
@@ -11,9 +11,12 @@ int main(int argc, char *argv[])
     mainCharacter.setLocation(globRooms[0]);
 
 
+
     QApplication a(argc, argv);
     MainWindow w;
+
     w.show();
+
     return a.exec();
 }
 

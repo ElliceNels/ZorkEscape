@@ -28,3 +28,17 @@ void Model:: removeItem(Item newItem){
         std::cout << "Item doesnt exits." << std::endl;
     }
 }
+
+void Model::changeRoom(int roomIndex){
+    setCurrentRoomIndex(roomIndex);
+
+}
+void Model::setCurrentRoomIndex(int newIndex){
+    currentRoomIndex = newIndex;
+}
+int Model::getCurrentRoomIndex(){
+    return currentRoomIndex;
+}
+
+
+

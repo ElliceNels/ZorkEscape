@@ -30,9 +30,10 @@ public:
     void addItemToRoom(Item item);
     void removeItemFromRoom(Item item);
 
-    void printItemsInRoom();
+    string printItemsInRoom();
+    string printRoomItemDetails();
 
-    virtual void printNameAndDescription() override;
+    virtual string printNameAndDescription() override;
 
 
 };

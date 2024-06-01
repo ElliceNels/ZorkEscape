@@ -11,7 +11,7 @@ private:
     string name;
     string description;
 public:
-    virtual void printNameAndDescription() = 0;
+    virtual string printNameAndDescription() = 0;
 
     string getName(){return name;};
     void setName(string name);

@@ -3,6 +3,7 @@
 
 #include <QMainWindow>
 #include<QStackedWidget>
+#include <QLabel>
 #include "dialogue.h"
 #include "model.h"
 
@@ -22,23 +23,35 @@ public:
     ~MainWindow();
     void initiateGame();
     void roomCreation();
-    void fillRooms();
     void itemCreation();
+    void setLabelText(std::string text, QLabel *label);
+    void changeRoom(int index,  QLabel *label1,  QLabel *label2);
 
 private slots:
-    void on_pushButton_clicked();
-
     void on_continueButton_clicked();
-
-    void on_label_8_customContextMenuRequested(const QPoint &pos);
 
     void on_PlayButton_clicked();
 
-    void on_ArrowLeft_linkActivated(const QString &link);
 
+    void on_WUpButton_clicked();
+
+    void on_KUpButton_clicked();
+
+    void on_KLeftButton_clicked();
+
+    void on_KRightButton_clicked();
+
+    void on_KWLeftButton_clicked();
+
+    void on_KWDownButton_clicked();
+
+    void on_BDownButton_clicked();
+
+    void on_SRightButton_clicked();
 
 private:
     Ui::MainWindow *ui;
     Model model;
+    Dialogue d;
 };
 #endif // MAINWINDOW_H

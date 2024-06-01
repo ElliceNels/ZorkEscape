@@ -8,7 +8,7 @@ class Character;
 class Inventory
 {
 private:
-    //FRIENDSHIP
+    //FRIENDSHIP -> it is given, not taken -> Inventory makes Character a friend (giving it access)
     friend class Character;
     std::vector<Item> inventory;
 public:

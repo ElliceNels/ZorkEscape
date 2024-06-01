@@ -15,7 +15,7 @@ Item::Item(int id, string name, string description, Room* location) {
 // OVERLOADED EQUALITY OPERATOR
 bool Item:: operator==(const Item& item) const {
     // Compare the names of 'this' and 'other' Item objects
-    return this->id == item.id;
+    return (this->id == item.id) && (1); //fix to compare names
 }
 
 void Item::Move(Room* newLocation) {
@@ -23,6 +23,6 @@ void Item::Move(Room* newLocation) {
     cout << "Location Moved" << endl;
 }
 
-void Item:: printNameAndDescription(){
-    cout << "Item - " << getName() << ": " << getDescription() << endl;
+string Item:: printNameAndDescription(){
+    return "Item - " + getName() + ": " + getDescription() + "\n";
 }
