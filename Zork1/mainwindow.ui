@@ -36,7 +36,7 @@
        <bool>false</bool>
       </property>
       <property name="currentIndex">
-       <number>6</number>
+       <number>2</number>
       </property>
       <widget class="QWidget" name="home1">
        <property name="styleSheet">
@@ -362,7 +362,10 @@ in a room.</string>
          <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;You enter the room. &lt;/p&gt;&lt;p&gt;There is 5 items in the room.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
         </property>
         <property name="scaledContents">
-         <bool>false</bool>
+         <bool>true</bool>
+        </property>
+        <property name="wordWrap">
+         <bool>true</bool>
         </property>
         <property name="margin">
          <number>5</number>
@@ -501,6 +504,9 @@ in a room.</string>
         <property name="scaledContents">
          <bool>false</bool>
         </property>
+        <property name="wordWrap">
+         <bool>true</bool>
+        </property>
         <property name="margin">
          <number>5</number>
         </property>
@@ -527,7 +533,10 @@ in a room.</string>
          <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;You enter the room. &lt;/p&gt;&lt;p&gt;There is 5 items in the room.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
         </property>
         <property name="scaledContents">
-         <bool>false</bool>
+         <bool>true</bool>
+        </property>
+        <property name="wordWrap">
+         <bool>true</bool>
         </property>
         <property name="margin">
          <number>5</number>
@@ -690,7 +699,10 @@ in a room.</string>
          <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;You enter the room. &lt;/p&gt;&lt;p&gt;There is 5 items in the room.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
         </property>
         <property name="scaledContents">
-         <bool>false</bool>
+         <bool>true</bool>
+        </property>
+        <property name="wordWrap">
+         <bool>true</bool>
         </property>
         <property name="margin">
          <number>5</number>
@@ -722,6 +734,9 @@ in a room.</string>
         </property>
         <property name="scaledContents">
          <bool>false</bool>
+        </property>
+        <property name="wordWrap">
+         <bool>true</bool>
         </property>
         <property name="margin">
          <number>5</number>
@@ -868,7 +883,10 @@ in a room.</string>
          <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;You enter the room. &lt;/p&gt;&lt;p&gt;There is 5 items in the room.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
         </property>
         <property name="scaledContents">
-         <bool>false</bool>
+         <bool>true</bool>
+        </property>
+        <property name="wordWrap">
+         <bool>true</bool>
         </property>
         <property name="margin">
          <number>5</number>
@@ -900,6 +918,9 @@ in a room.</string>
         </property>
         <property name="scaledContents">
          <bool>false</bool>
+        </property>
+        <property name="wordWrap">
+         <bool>true</bool>
         </property>
         <property name="margin">
          <number>5</number>
@@ -1030,7 +1051,10 @@ in a room.</string>
          <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;You enter the room. &lt;/p&gt;&lt;p&gt;There is 5 items in the room.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
         </property>
         <property name="scaledContents">
-         <bool>false</bool>
+         <bool>true</bool>
+        </property>
+        <property name="wordWrap">
+         <bool>true</bool>
         </property>
         <property name="margin">
          <number>5</number>
@@ -1062,6 +1086,9 @@ in a room.</string>
         </property>
         <property name="scaledContents">
          <bool>false</bool>
+        </property>
+        <property name="wordWrap">
+         <bool>true</bool>
         </property>
         <property name="margin">
          <number>5</number>
@@ -1192,7 +1219,10 @@ in a room.</string>
          <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;You enter the room. &lt;/p&gt;&lt;p&gt;There is 5 items in the room.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
         </property>
         <property name="scaledContents">
-         <bool>false</bool>
+         <bool>true</bool>
+        </property>
+        <property name="wordWrap">
+         <bool>true</bool>
         </property>
         <property name="margin">
          <number>5</number>
@@ -1224,6 +1254,9 @@ in a room.</string>
         </property>
         <property name="scaledContents">
          <bool>false</bool>
+        </property>
+        <property name="wordWrap">
+         <bool>true</bool>
         </property>
         <property name="margin">
          <number>5</number>

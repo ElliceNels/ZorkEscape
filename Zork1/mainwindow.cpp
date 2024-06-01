@@ -116,7 +116,7 @@ void MainWindow::itemCreation(){
 
 
 
-    //ui->Character->hide();
+
 
 void MainWindow::on_PlayButton_clicked()
 {

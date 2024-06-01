@@ -29,7 +29,7 @@ string Room:: printItemsInRoom(){
     for (auto it = itemsInRoom.begin(); it != itemsInRoom.end(); ++it) {
         it->printNameAndDescription();
     }
-    return std::to_string(itemsInRoom.size()) + " items in the " + getName(); //fix get name
+    return std::to_string(itemsInRoom.size()) + " items in the " + getName() + "\n" + printNameAndDescription();
 }
 
 string Room::printRoomItemDetails(){
