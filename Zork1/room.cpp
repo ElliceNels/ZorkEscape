@@ -29,7 +29,7 @@ string Room:: printItemsInRoom(){
     for (auto it = itemsInRoom.begin(); it != itemsInRoom.end(); ++it) {
         it->printNameAndDescription();
     }
-    return std::to_string(itemsInRoom.size()) + " items in the " + getName() + "\n" + printNameAndDescription();
+    return std::to_string(itemsInRoom.size()) + " items in the room." + "\n" + printNameAndDescription();
 }
 
 string Room::printRoomItemDetails(){
@@ -55,7 +55,7 @@ void Room::setExits(Room *north, Room *east, Room *south, Room *west){
 
 
 string Room:: printNameAndDescription(){
-    return "Room - " + getName() + ": " + getDescription();
+    return getName() + ": " + getDescription();
 }
 
 

@@ -40,12 +40,12 @@ void MainWindow::roomCreation(){
     // 6 rooms total
     Room *waitRoom, *keyRoom, *keycardRoom, *buttonRoom, *stickRoom, *lollipopRoom;
 
-    waitRoom = new Room(2, "Waiting Room", "ROOM W STUFF");
-    keyRoom = new Room(3, "Key Room", "ROOM W STUFF");
-    keycardRoom = new Room(4, "KeyCard Room", "ROOM W STUFF");
-    buttonRoom = new Room(5, "Button Room", "ROOM W STUFF");
-    stickRoom = new Room(6, "Stick Room", "ROOM W STUFF");
-    lollipopRoom = new Room(7, "Lollipop Room", "ROOM W STUFF");
+    waitRoom = new Room(2, "Waiting Room", "You are dropping in a room that has nothing.");
+    keyRoom = new Room(3, "Key Room", "Oooo, this room has a LOT of keys");
+    keycardRoom = new Room(4, "KeyCard Room", "Uh oh, this room is loaded with keycards too");
+    buttonRoom = new Room(5, "Button Room", "There are buttons to pick up everywhere");
+    stickRoom = new Room(6, "Stick Room", "Sticks Sticks Sticks");
+    lollipopRoom = new Room(7, "Lollipop Room", "Wow! You made it to the lollipop room and are released by the two men!!");
     // (N, e, s, w)
     waitRoom->setExits(keyRoom, NULL, NULL, NULL);
     keyRoom->setExits(buttonRoom, stickRoom, NULL, keycardRoom);

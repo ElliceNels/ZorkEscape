@@ -29,24 +29,14 @@ public:
 
 private slots:
     void on_continueButton_clicked();
-
     void on_PlayButton_clicked();
-
-
     void on_WUpButton_clicked();
-
     void on_KUpButton_clicked();
-
     void on_KLeftButton_clicked();
-
     void on_KRightButton_clicked();
-
     void on_KWLeftButton_clicked();
-
     void on_KWDownButton_clicked();
-
     void on_BDownButton_clicked();
-
     void on_SRightButton_clicked();
 
 private:
