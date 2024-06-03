@@ -60,7 +60,6 @@ string Room:: printNameAndDescription(){
 
 //DEEP COPY CONSTRUCTOR AND C++ REFERENCES
 Room::Room(const Room& other) : Entity(other), roomId(other.roomId) {
-    // Copy items in the room
     for (const Item& item : other.itemsInRoom) {
         this->itemsInRoom.push_back(Item(item)); //Item copy constructor
     }

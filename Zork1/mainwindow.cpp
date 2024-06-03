@@ -71,6 +71,7 @@ void MainWindow::roomCreation(){
 
 }
 
+//MEM MANAGE -> ALL ON HEAP
 void MainWindow::itemCreation(){
 
      globRooms[1]->addItemToRoom(*new Item(1, "Key", "An old rustic key"));
@@ -82,15 +83,15 @@ void MainWindow::itemCreation(){
      globRooms[1]->addItemToRoom(*new Item(7, "Key", "A very dirty key"));
      globRooms[1]->addItemToRoom(*new Item(8, "Key", "Key to a lock"));
 
-   globRooms[2]->addItemToRoom(*new Item(9, "Key-Card", "A key-card with no barcode"));
+    globRooms[2]->addItemToRoom(*new Item(9, "Key-Card", "A key-card with no barcode"));
     globRooms[2]->addItemToRoom(*new Item(10, "Key-Card", "Wait this is a piece of paper"));
-     globRooms[2]->addItemToRoom( *new Item(11, "Key-Card", "A key-card"));
+    globRooms[2]->addItemToRoom( *new Item(11, "Key-Card", "A key-card"));
     globRooms[2]->addItemToRoom(*new Item(12, "Key-Card", "A high-tech card with all access"));
-     globRooms[2]->addItemToRoom(*new Item(13, "Key-Card", "A key-card in the shape of a key"));
+    globRooms[2]->addItemToRoom(*new Item(13, "Key-Card", "A key-card in the shape of a key"));
 
-     globRooms[3]->addItemToRoom(*new Item(14, "Button", "A flat button"));
+    globRooms[3]->addItemToRoom(*new Item(14, "Button", "A flat button"));
     globRooms[3]->addItemToRoom(*new Item(15, "Button", "A pressy thingy"));
-     globRooms[3]->addItemToRoom(*new Item(16, "Button", "Boopy boopy"));
+    globRooms[3]->addItemToRoom(*new Item(16, "Button", "Boopy boopy"));
     globRooms[3]->addItemToRoom(*new Item(17, "Button", "A button that is very red"));
     globRooms[3]->addItemToRoom(*new Item(18, "Button", "A pressible button"));
 

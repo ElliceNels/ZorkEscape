@@ -18,6 +18,9 @@ public:
 
     string getDescription(){return description;};
     void setDescription(string description);
+
+    //TAKE CARE OF THIS -> MEM MANAGE + DESTRUCTORS
+    virtual ~Entity() {}
 };
 
 #endif // ENTITY_H

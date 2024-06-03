@@ -36,7 +36,7 @@
        <bool>false</bool>
       </property>
       <property name="currentIndex">
-       <number>2</number>
+       <number>6</number>
       </property>
       <widget class="QWidget" name="home1">
        <property name="styleSheet">
@@ -1146,7 +1146,7 @@ in a room.</string>
          <string notr="true">background-color: white; color: black;</string>
         </property>
         <property name="text">
-         <string>Inventory stuff</string>
+         <string/>
         </property>
         <property name="scaledContents">
          <bool>true</bool>
@@ -1158,11 +1158,32 @@ in a room.</string>
        <widget class="QListWidget" name="listWidget">
         <property name="geometry">
          <rect>
-          <x>790</x>
-          <y>370</y>
-          <width>256</width>
-          <height>192</height>
+          <x>40</x>
+          <y>330</y>
+          <width>131</width>
+          <height>261</height>
          </rect>
+        </property>
+        <property name="font">
+         <font>
+          <pointsize>12</pointsize>
+          <bold>true</bold>
+         </font>
+        </property>
+        <property name="autoFillBackground">
+         <bool>true</bool>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">font-weight: bold;</string>
+        </property>
+        <property name="isWrapping" stdset="0">
+         <bool>true</bool>
+        </property>
+        <property name="resizeMode">
+         <enum>QListView::Adjust</enum>
+        </property>
+        <property name="uniformItemSizes">
+         <bool>true</bool>
         </property>
        </widget>
       </widget>

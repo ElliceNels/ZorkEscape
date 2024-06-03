@@ -35,6 +35,7 @@ public:
 
     virtual string printNameAndDescription() override;
 
+    //DEEP COPY CONSTRUCTOR
     Room(const Room& other);
 
 
