@@ -35,6 +35,8 @@ public:
 
     virtual string printNameAndDescription() override;
 
+    Room(const Room& other);
+
 
 };
 

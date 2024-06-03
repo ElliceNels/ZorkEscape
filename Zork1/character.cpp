@@ -3,7 +3,7 @@
 #include <algorithm>
 
  Character::Character() {
-    Inventory();
+     Inventory<Item>();
 }
 
  void Character::addToInventory(Item item) {

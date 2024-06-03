@@ -11,7 +11,7 @@ using namespace std;
 class Character : public Interactable, public Entity
 {
 private:
-    Inventory inventory;
+    Inventory <Item> inventory;
 
 public:
     Character();
@@ -20,7 +20,7 @@ public:
 
 
     vector<Item> getInventory(){return inventory.inventory;};
-    void setInventory(Inventory inventory){ this->inventory = std::move(inventory);}
+    void setInventory(Inventory<Item> inventory){ this->inventory = std::move(inventory);}
 
 
     void addToInventory(Item item);

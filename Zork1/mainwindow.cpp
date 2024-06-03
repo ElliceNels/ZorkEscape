@@ -35,6 +35,13 @@ void MainWindow::setLabelText(std::string text, QLabel *label)
     label->setText(QString::fromStdString(text));
 }
 
+void MainWindow::addToItemToInventory(Item item){
+    mainCharacter.addToInventory(item);
+    ui->listWidget->addItem(QString::fromStdString(item.getName()));
+    //add the text or sum to ui
+}
+void useItem();//////////////////////////////////////////////////////////////////////////////////
+
 void MainWindow::roomCreation(){
 
     // 6 rooms total
@@ -65,43 +72,39 @@ void MainWindow::roomCreation(){
 }
 
 void MainWindow::itemCreation(){
-    Room *keyRoom = globRooms[1];
-     globRooms[1]->addItemToRoom(*new Item(1, "Key", "An old rustic key", keyRoom));
-     globRooms[1]->addItemToRoom(*new Item(2, "Key", "The key to a door of some sort", keyRoom));
-     globRooms[1]->addItemToRoom(*new Item(3, "Key", "A key with unknown use", keyRoom));
-     globRooms[1]->addItemToRoom(*new Item(4, "Key", "This key does nothing", keyRoom));
-     globRooms[1]->addItemToRoom(*new Item(5, "Key", "A key with an inscription, '9274'", keyRoom));
-     globRooms[1]->addItemToRoom(*new Item(6, "Key", "unknown", keyRoom));
-     globRooms[1]->addItemToRoom(*new Item(7, "Key", "A very dirty key", keyRoom));
-     globRooms[1]->addItemToRoom(*new Item(8, "Key", "Key to a lock", keyRoom));
 
-    Room *keycardRoom = globRooms[2];
-   globRooms[2]->addItemToRoom(*new Item(9, "Key-Card", "A key-card with no barcode", keycardRoom));
-    globRooms[2]->addItemToRoom(*new Item(10, "Key-Card", "Wait this is a piece of paper", keycardRoom));
-     globRooms[2]->addItemToRoom( *new Item(11, "Key-Card", "A key-card", keycardRoom));
-    globRooms[2]->addItemToRoom(*new Item(12, "Key-Card", "A high-tech card with all access", keycardRoom));
-     globRooms[2]->addItemToRoom(*new Item(13, "Key-Card", "A key-card in the shape of a key", keycardRoom));
+     globRooms[1]->addItemToRoom(*new Item(1, "Key", "An old rustic key"));
+     globRooms[1]->addItemToRoom(*new Item(2, "Key", "The key to a door of some sort"));
+     globRooms[1]->addItemToRoom(*new Item(3, "Key", "A key with unknown use"));
+     globRooms[1]->addItemToRoom(*new Item(4, "Key", "This key does nothing"));
+     globRooms[1]->addItemToRoom(*new Item(5, "Key", "A key with an inscription, '9274'"));
+     globRooms[1]->addItemToRoom(*new Item(6, "Key", "unknown"));
+     globRooms[1]->addItemToRoom(*new Item(7, "Key", "A very dirty key"));
+     globRooms[1]->addItemToRoom(*new Item(8, "Key", "Key to a lock"));
 
-    Room *buttonRoom = globRooms[3];
-     globRooms[3]->addItemToRoom(*new Item(14, "Button", "A flat button", buttonRoom));
-    globRooms[3]->addItemToRoom(*new Item(15, "Button", "A pressy thingy", buttonRoom));
-    globRooms[3]->addItemToRoom(*new Item(16, "Button", "Boopy boopy", buttonRoom));
-    globRooms[3]->addItemToRoom(*new Item(17, "Button", "A button that is very red", buttonRoom));
-    globRooms[3]->addItemToRoom(*new Item(18, "Button", "A pressible button", buttonRoom));
+   globRooms[2]->addItemToRoom(*new Item(9, "Key-Card", "A key-card with no barcode"));
+    globRooms[2]->addItemToRoom(*new Item(10, "Key-Card", "Wait this is a piece of paper"));
+     globRooms[2]->addItemToRoom( *new Item(11, "Key-Card", "A key-card"));
+    globRooms[2]->addItemToRoom(*new Item(12, "Key-Card", "A high-tech card with all access"));
+     globRooms[2]->addItemToRoom(*new Item(13, "Key-Card", "A key-card in the shape of a key"));
 
-    Room *stickRoom = globRooms[4];
-    globRooms[4]->addItemToRoom(*new Item(19, "Stick", "A small rod", stickRoom));
-    globRooms[4]->addItemToRoom(*new Item(20, "Stick", "Stick", stickRoom));
-    globRooms[4]->addItemToRoom(*new Item(21, "Stick", "A stick that looks kinda stuck", stickRoom));
-    globRooms[4]->addItemToRoom(*new Item(21, "Stick", "A stick", stickRoom));
-    globRooms[4]->addItemToRoom(*new Item(23, "Stick", "A big pole", stickRoom));
+     globRooms[3]->addItemToRoom(*new Item(14, "Button", "A flat button"));
+    globRooms[3]->addItemToRoom(*new Item(15, "Button", "A pressy thingy"));
+     globRooms[3]->addItemToRoom(*new Item(16, "Button", "Boopy boopy"));
+    globRooms[3]->addItemToRoom(*new Item(17, "Button", "A button that is very red"));
+    globRooms[3]->addItemToRoom(*new Item(18, "Button", "A pressible button"));
 
-    Room *lollipopRoom = globRooms[5];
-    globRooms[5]->addItemToRoom(*new Item(24, "Lollipop", "A lollipop", lollipopRoom));
-    globRooms[5]->addItemToRoom(*new Item(25, "Lollipop", "A yummy lollipop", lollipopRoom));
-    globRooms[5]->addItemToRoom(*new Item(26, "Lollipop", "A tasty lollipop", lollipopRoom));
-    globRooms[5]->addItemToRoom( *new Item(27, "Lollipop", "A HUGE spiral lolly", lollipopRoom));
-    globRooms[5]->addItemToRoom(*new Item(28, "Lollipop", "A LOLlipop", lollipopRoom));
+    globRooms[4]->addItemToRoom(*new Item(19, "Stick", "A small rod"));
+    globRooms[4]->addItemToRoom(*new Item(20, "Stick", "Stick"));
+    globRooms[4]->addItemToRoom(*new Item(21, "Stick", "A stick that looks kinda stuck"));
+    globRooms[4]->addItemToRoom(*new Item(21, "Stick", "A stick"));
+    globRooms[4]->addItemToRoom(*new Item(23, "Stick", "A big pole"));
+
+    globRooms[5]->addItemToRoom(*new Item(24, "Lollipop", "A lollipop"));
+    globRooms[5]->addItemToRoom(*new Item(25, "Lollipop", "A yummy lollipop"));
+    globRooms[5]->addItemToRoom(*new Item(26, "Lollipop", "A tasty lollipop"));
+    globRooms[5]->addItemToRoom( *new Item(27, "Lollipop", "A HUGE spiral lolly"));
+    globRooms[5]->addItemToRoom(*new Item(28, "Lollipop", "A LOLlipop"));
 }
 
 
@@ -127,6 +130,7 @@ void MainWindow::on_continueButton_clicked()
 {
     initiateGame();
     changeRoom(2, ui->WDialogueLabel, ui->WItemsInRoom);
+    addToItemToInventory(*new Item(3, "Key", "A key with unknown use"));
 }
 
 void MainWindow::on_WUpButton_clicked()

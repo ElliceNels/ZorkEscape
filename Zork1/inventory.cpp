@@ -2,11 +2,12 @@
 #include <iostream>
 #include <algorithm>
 
-Inventory::Inventory() {
+template <typename T>
+Inventory<T>::Inventory() {
 }
 
-
-void Inventory:: addToInventory(Item item){
+template <typename T>
+void Inventory<T>:: addToInventory(Item item){
     if (!isInInventory(item)) {
         inventory.push_back(item);
         std::cout << "Item added to inventory." << std::endl;
@@ -15,7 +16,8 @@ void Inventory:: addToInventory(Item item){
     }
 }
 
-void Inventory:: removeFromInventory(Item item){
+template <typename T>
+void Inventory<T>:: removeFromInventory(Item item){
     auto iterate = std::find(inventory.begin(), inventory.end(), item);
     // Check if the value was found
     if (iterate != inventory.end()) {
@@ -27,13 +29,15 @@ void Inventory:: removeFromInventory(Item item){
     }
 }
 
-bool Inventory::isInInventory(Item item) {
+template <typename T>
+bool Inventory<T>::isInInventory(Item item) {
     auto iterate = std::find(inventory.begin(), inventory.end(), item);
     // Check if the value was found
     return (iterate != inventory.end());
 }
 
-void Inventory:: printInventory(){
+template <typename T>
+void Inventory<T>:: printInventory(){
     // Output elements of the vector using an iterator
 
     if (inventory.empty()){
@@ -47,3 +51,5 @@ void Inventory:: printInventory(){
 
     std::cout << std::endl;
 }
+
+template class Inventory<Item>;

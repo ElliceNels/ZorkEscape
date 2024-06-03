@@ -6,10 +6,13 @@ extern Room* globRooms[6];
 class Model
 {
 private:
-    Character character;
     vector<Item> allItems;
-    Room* globRooms;
-    int currentRoomIndex;
+    // union current{
+        Character character;
+        Room* globRooms;
+        int currentRoomIndex;
+    // };
+
 
 public:
     Model();

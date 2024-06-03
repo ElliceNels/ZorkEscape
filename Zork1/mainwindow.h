@@ -26,6 +26,8 @@ public:
     void itemCreation();
     void setLabelText(std::string text, QLabel *label);
     void changeRoom(int index,  QLabel *label1,  QLabel *label2);
+    void addToItemToInventory(Item item);
+    void useItem(); //just remove from list but dont remove from inventory to keep access
 
 private slots:
     void on_continueButton_clicked();
@@ -42,6 +44,7 @@ private slots:
 private:
     Ui::MainWindow *ui;
     Model model;
+    Character mainCharacter;
     Dialogue d;
 };
 #endif // MAINWINDOW_H

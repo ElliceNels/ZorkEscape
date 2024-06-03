@@ -1,8 +1,7 @@
 #include "item.h"
 #include <iostream>
-Item::Item(int id, string name, string description, Room* location) {
+Item::Item(int id, string name, string description) {
     this->id = id;
-    this->location = location;
     setName(name);
     setDescription(description);
 
@@ -18,10 +17,10 @@ bool Item:: operator==(const Item& item) const {
     return (this->id == item.id) && (1); //fix to compare names
 }
 
-void Item::Move(Room* newLocation) {
-    setLocation(newLocation);
-    cout << "Location Moved" << endl;
+Item::Item(const Item& other) : Entity(other) {
+    this->id = other.id;
 }
+
 
 string Item:: printNameAndDescription(){
     return "Item - " + getName() + ": " + getDescription() + "\n";
