@@ -36,6 +36,14 @@ bool Inventory<T>::isInInventory(Item item) {
     return (iterate != inventory.end());
 }
 
+template <typename Item>
+bool Inventory<Item>::isInInventory(int ID) {
+    auto it = std::find_if(inventory.begin(), inventory.end(), [ID](Item& item) {
+        return item.getId() == ID;
+    });
+    return (it != inventory.end());
+}
+
 template <typename T>
 void Inventory<T>:: printInventory(){
     // Output elements of the vector using an iterator

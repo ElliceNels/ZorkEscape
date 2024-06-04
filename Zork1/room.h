@@ -29,6 +29,7 @@ public:
     std::vector<Item> getItemsInRoom(){  return itemsInRoom;}
     void addItemToRoom(Item item);
     void removeItemFromRoom(Item item);
+    Item findItemWithId( int ID);
 
     string printItemsInRoom();
     string printRoomItemDetails();

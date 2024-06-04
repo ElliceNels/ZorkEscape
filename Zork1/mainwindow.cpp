@@ -2,6 +2,7 @@
 #include "ui_mainwindow.h"
 #include "room.h"
 #include "item.h"
+#include<iostream>
 extern Room *globRooms[6];
 
 MainWindow::MainWindow(QWidget *parent): QMainWindow(parent), ui(new Ui::MainWindow)
@@ -9,6 +10,7 @@ MainWindow::MainWindow(QWidget *parent): QMainWindow(parent), ui(new Ui::MainWin
     ui->setupUi(this);
     AllPages = ui->AllPages;
     AllPages->setCurrentIndex(0);
+    ui->listWidget->hide();
 
 }
 
@@ -21,6 +23,7 @@ MainWindow::~MainWindow()
 void MainWindow::initiateGame(){
     roomCreation();
     itemCreation();
+    ui->listWidget->show();
 
 }
 
@@ -37,10 +40,12 @@ void MainWindow::setLabelText(std::string text, QLabel *label)
 
 void MainWindow::addToItemToInventory(Item item){
     mainCharacter.addToInventory(item);
-    ui->listWidget->addItem(QString::fromStdString(item.getName()));
-    //add the text or sum to ui
+    ui->listWidget->addItem(QString::fromStdString(item.getName() +" "+ to_string(item.getId())));
 }
-void useItem();//////////////////////////////////////////////////////////////////////////////////
+
+void MainWindow::useItem(){
+    // ui->listWidget->removeItemWidget(ui->listWidget->)
+    }//////////////////////////////////////////////////////////////////////////////////
 
 void MainWindow::roomCreation(){
 
@@ -122,6 +127,7 @@ void MainWindow::itemCreation(){
 
 
 
+
 void MainWindow::on_PlayButton_clicked()
 {
     AllPages->setCurrentIndex(1);
@@ -131,7 +137,7 @@ void MainWindow::on_continueButton_clicked()
 {
     initiateGame();
     changeRoom(2, ui->WDialogueLabel, ui->WItemsInRoom);
-    addToItemToInventory(*new Item(3, "Key", "A key with unknown use"));
+    ui->listWidget->show();
 }
 
 void MainWindow::on_WUpButton_clicked()
@@ -145,7 +151,7 @@ void MainWindow::on_WUpButton_clicked()
 
 void MainWindow::on_KUpButton_clicked()
 {
-    if(1){
+    if(mainCharacter.isInInventory(4)){
         changeRoom(5, ui->BDialogueLabel, ui->BItemsInRoom);
     } else {
         setLabelText(d.getFailedDoorAccess(), ui->KDialogueLabel);
@@ -155,7 +161,7 @@ void MainWindow::on_KUpButton_clicked()
 
 void MainWindow::on_KLeftButton_clicked()
 {
-    if(1){
+    if(mainCharacter.isInInventory(2)){
         changeRoom(6, ui->SDialogueLabel, ui->SItemsInRoom);
     } else {
         setLabelText(d.getFailedDoorAccess(), ui->KDialogueLabel);
@@ -165,7 +171,7 @@ void MainWindow::on_KLeftButton_clicked()
 
 void MainWindow::on_KRightButton_clicked()
 {
-        if(1){
+        if(mainCharacter.isInInventory(6)){
         changeRoom(4, ui->KWDialogueLabel, ui->KWItemsInRoom);
     } else {
         setLabelText(d.getFailedDoorAccess(), ui->KDialogueLabel);
@@ -219,5 +225,77 @@ void MainWindow::on_SRightButton_clicked()
     } else {
         setLabelText(d.getFailedDoorAccess(), ui->SDialogueLabel);
     }
+}
+
+
+void MainWindow::on_UPKEY4_clicked()
+{
+    Item item = globRooms[1]->findItemWithId(4);
+    ui->UPKEY4->hide();
+    addToItemToInventory(item);
+}
+
+
+
+
+void MainWindow::on_KEY1_clicked()
+{
+    Item item = globRooms[1]->findItemWithId(1);
+    ui->KEY1->hide();
+    addToItemToInventory(item);
+}
+
+
+void MainWindow::on_LEFTKEY2_clicked()
+{
+    Item item = globRooms[1]->findItemWithId(2);
+    ui->LEFTKEY2->hide();
+    addToItemToInventory(item);
+}
+
+
+void MainWindow::on_KEY7_clicked()
+{
+    Item item = globRooms[1]->findItemWithId(7);
+    ui->KEY7->hide();
+    addToItemToInventory(item);
+}
+
+
+void MainWindow::on_KEY8_clicked()
+{
+    Item item = globRooms[1]->findItemWithId(8);
+    ui->KEY8->hide();
+    addToItemToInventory(item);
+}
+
+
+void MainWindow::on_KEY5_clicked()
+{
+    Item item = globRooms[1]->findItemWithId(5);
+    ui->KEY5->hide();
+    addToItemToInventory(item);
+}
+
+
+void MainWindow::on_KEY3_clicked()
+{
+    Item item = globRooms[1]->findItemWithId(3);
+    ui->KEY3->hide();
+    addToItemToInventory(item);
+}
+
+
+void MainWindow::on_RIGHTKEY6_clicked()
+{
+    Item item = globRooms[1]->findItemWithId(6);
+    ui->RIGHTKEY6->hide();
+    addToItemToInventory(item);
+}
+
+
+void MainWindow::on_CLOSELOLLIPOP_clicked()
+{
+    close();
 }
 

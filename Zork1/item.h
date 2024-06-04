@@ -7,7 +7,7 @@
 class Room;
 //NAMESPACES
 using namespace std;
-//MULTIPLE INHERITANCE
+
 class Item : public Entity
 {
 private:

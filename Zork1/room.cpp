@@ -70,4 +70,11 @@ Room::Room(const Room& other) : Entity(other), roomId(other.roomId) {
     }
 }
 
+Item Room::findItemWithId( int ID){
+    for (Item item : getItemsInRoom()){
+        if (item.getId() == ID)
+            return item;
+    };
+}
+
 

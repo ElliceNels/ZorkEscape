@@ -20,6 +20,7 @@ public:
     void addToInventory(Item item);
     void removeFromInventory(Item item);
     bool isInInventory(Item item);
+    bool isInInventory(int ID);
     void printInventory();
 };
 

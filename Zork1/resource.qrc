@@ -6,5 +6,33 @@
         <file>ARROW-LEFT.png</file>
         <file>ARROW-RIGHT.png</file>
         <file>CHARACTER.png</file>
+        <file>KEY1.png</file>
+        <file>KEY2.png</file>
+        <file>RIGHT-KEY1.png</file>
+        <file>KEY3.png</file>
+        <file>KEY4.png</file>
+        <file>KEY5.png</file>
+        <file>KEY6.png</file>
+        <file>KEY8.png</file>
+        <file>KEYCARD9.png</file>
+        <file>KEYCARD10.png</file>
+        <file>KEYCARD11.png</file>
+        <file>KEYCARD12.png</file>
+        <file>KEYCARD13.png</file>
+        <file>STICK19.png</file>
+        <file>STICK20.png</file>
+        <file>STICK21.png</file>
+        <file>STICK22.png</file>
+        <file>STICK23.png</file>
+        <file>BUTTON14.png</file>
+        <file>BUTTON15.png</file>
+        <file>BUTTON16.png</file>
+        <file>BUTTON17.png</file>
+        <file>BUTTON18.png</file>
+        <file>LOLLIPOP24.png</file>
+        <file>LOLLIPOP25.png</file>
+        <file>LOLLIPOP26.png</file>
+        <file>LOLLIPOP27.png</file>
+        <file>LOLLIPOP28.png</file>
     </qresource>
 </RCC>

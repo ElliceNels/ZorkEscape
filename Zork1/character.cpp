@@ -45,6 +45,13 @@
      return (iterate != inventory.inventory.end());
  }
 
+ bool Character::isInInventory(int ID) {
+     auto it = std::find_if(inventory.inventory.begin(), inventory.inventory.end(), [ID](Item& item) {
+         return item.getId() == ID;
+     });
+     return (it != inventory.inventory.end());
+ }
+
   void Character::Move(Room* newLocation) {
      setLocation(newLocation);
      cout << "Location Moved" << endl;
