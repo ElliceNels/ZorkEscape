@@ -141,20 +141,13 @@ void MainWindow::itemCreation(){
     globRooms[5]->addItemToRoom(*new Item(28, "Lollipop", "A LOLlipop"));
 }
 
-
-// Things to happen to initiate game
-// - create rooms
-// - fill rooms with items
-// - set current room to room with id 3 (current room = globRooms[idWanted-2]) - may be unneccessary
-// - create character
-// - Switch character location to current room
-
-
-
-
-
-
-
+// ----------------------------------------------------------
+// for guidance - numbers = room index, letter = roomname
+//                    B5
+//                    \
+//          S6 -- K3 -- KW4
+//                    \          \
+//                  W2        L7
 
 void MainWindow::on_PlayButton_clicked()
 {
@@ -179,23 +172,21 @@ void MainWindow::on_WUpButton_clicked()
 
 void MainWindow::on_KUpButton_clicked()
 {
-    if(mainCharacter.isInInventory(11) ){
+    if(mainCharacter.isInInventory(9) || mainCharacter.isInInventory(11) ){
         changeRoom(5, ui->BDialogueLabel, ui->BItemsInRoom);
     } else {
         setLabelText(d.getFailedDoorAccess(), ui->KDialogueLabel);
     }
 }
 
-
 void MainWindow::on_KLeftButton_clicked()
 {
-    if(mainCharacter.isInInventory(2) ||mainCharacter.isInInventory(11)){
+    if(mainCharacter.isInInventory(2) || mainCharacter.isInInventory(11)){
         changeRoom(6, ui->SDialogueLabel, ui->SItemsInRoom);
     } else {
         setLabelText(d.getFailedDoorAccess(), ui->KDialogueLabel);
     }
 }
-
 
 void MainWindow::on_KRightButton_clicked()
 {
@@ -206,16 +197,6 @@ void MainWindow::on_KRightButton_clicked()
 }
 }
 
-
-
-// for guidance - numbers = room index, letter = roomname
-//                    B5
-//                    \
-//          S6 -- K3 -- KW4
-//                    \          \
-//                  W2        L7
-
-
 void MainWindow::on_KWLeftButton_clicked()
 {
     if(1){
@@ -224,7 +205,6 @@ void MainWindow::on_KWLeftButton_clicked()
         setLabelText(d.getFailedDoorAccess(), ui->KWDialogueLabel);
     }
 }
-
 
 void MainWindow::on_KWDownButton_clicked()
 {
@@ -236,7 +216,6 @@ void MainWindow::on_KWDownButton_clicked()
     }
 }
 
-
 void MainWindow::on_BDownButton_clicked()
 {
     if(1){
@@ -245,7 +224,6 @@ void MainWindow::on_BDownButton_clicked()
         setLabelText(d.getFailedDoorAccess(), ui->BDialogueLabel);
     }
 }
-
 
 void MainWindow::on_SRightButton_clicked()
 {

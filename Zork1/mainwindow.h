@@ -44,22 +44,6 @@ private slots:
     void on_BDownButton_clicked();
     void on_SRightButton_clicked();
 
-    // void on_UPKEY4_clicked();
-
-    // void on_KEY1_clicked();
-
-    // void on_LEFTKEY2_clicked();
-
-    // void on_KEY7_clicked();
-
-    // void on_KEY8_clicked();
-
-    // void on_KEY5_clicked();
-
-    // void on_KEY3_clicked();
-
-    // void on_RIGHTKEY6_clicked();
-
     void on_CLOSELOLLIPOP_clicked();
 
 private:

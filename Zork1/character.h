@@ -7,7 +7,7 @@
 
 class Room;
 using namespace std;
-// INHERITANCE
+// MULTIPLE INHERITANCE
 class Character : public Interactable, public Entity
 {
 private:
@@ -21,7 +21,8 @@ public:
 
     vector<Item> getInventory(){return inventory.inventory;};
     void setInventory(Inventory<Item> inventory){ this->inventory = std::move(inventory);}
-
+    //SHALLOW COPY
+    Character(const Character& other);
 
     void addToInventory(Item item);
     void removeFromInventory(Item item);

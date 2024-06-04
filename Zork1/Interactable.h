@@ -5,7 +5,7 @@ class Room;
 //ABSTRACT CLASS
 class Interactable {
 private:
-    Room* location{};
+    Room* location{}; //intialise to null
 public:
     // VIRTUAL FUNCTION
     virtual void Move(Room* newLocation) = 0;
