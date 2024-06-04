@@ -3,6 +3,7 @@
 #include "character.h"
 #include <QApplication>
 
+//GLOBAL VARIABLE
 Room *globRooms[6];
 
 int main(int argc, char *argv[])

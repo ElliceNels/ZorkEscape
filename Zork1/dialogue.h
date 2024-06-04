@@ -8,7 +8,6 @@ class Dialogue
 {
 protected:
     const string failedDoorAccess = "You cannot open this door";
-    const string enterRoom = "You just entered a room";
     const string itemPickUp = "You just picked up an item";
     const string victory = "You escaped!! Here are some lollipops. Click the correct one to exit";
     const string placeholder1 = "";
@@ -19,10 +18,6 @@ public:
     string getFailedDoorAccess(){
         return failedDoorAccess;
     }
-
-    // string getEnterRoom(int itemsInRoom){
-    //     return enterRoom + "\nThere are " + itemsInRoom + " items in the room";
-    // }
 
     string getItemPickUp(){
         return itemPickUp;

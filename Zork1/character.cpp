@@ -23,11 +23,11 @@
          std::cout << "Value not found in the inventory." << std::endl;
      }
 }
-
+ //SHALLOW COPY
+ Character::Character(const Character& other) : Interactable(other), Entity(other), inventory(other.inventory) {};
 
  void Character:: printInventory(){
      // Output elements of the vector using an iterator
-
      if (inventory.inventory.empty()){
          std::cout << "Inventory is empty" << endl;
      }else {
@@ -58,5 +58,5 @@
 }
 
   string Character:: printNameAndDescription(){
-      cout << "Character - " << getName() << ": " << getDescription() << endl;
+      return "Character - "  + getName() + ": " + getDescription();
   }

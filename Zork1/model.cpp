@@ -3,7 +3,8 @@
 #include <algorithm>
 
 Model::Model() {
-    currentRoomIndex = 2;
+    //UNION in use
+    c.currentRoomIndex = 2;
 }
 
 void Model::addItem(Item newItem) {
@@ -34,10 +35,10 @@ void Model::changeRoom(int roomIndex){
 
 }
 void Model::setCurrentRoomIndex(int newIndex){
-    currentRoomIndex = newIndex;
+    c.currentRoomIndex = newIndex;
 }
 int Model::getCurrentRoomIndex(){
-    return currentRoomIndex;
+    return c.currentRoomIndex;
 }
 
 

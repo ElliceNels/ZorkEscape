@@ -7,11 +7,13 @@ class Model
 {
 private:
     vector<Item> allItems;
-    // union current{
-        Character character;
+    // UNION
+    union Current{
+        Character *currentCharacter;
         Room* globRooms;
         int currentRoomIndex;
-    // };
+    } c;
+
 
 
 public:

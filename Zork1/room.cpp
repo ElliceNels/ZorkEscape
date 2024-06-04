@@ -60,7 +60,7 @@ void Room::setExits(Room *north, Room *east, Room *south, Room *west){
         exits["south"] = south;
     if (west != NULL)
         exits["west"] = west;
-} //implement
+}
 
 
 string Room:: printNameAndDescription(){
@@ -68,7 +68,7 @@ string Room:: printNameAndDescription(){
 }
 
 //DEEP COPY CONSTRUCTOR AND C++ REFERENCES
-Room::Room(const Room& other) : Entity(other), roomId(other.roomId) {
+Room::Room(const Room& other) : Entity(other), roomId(other.roomId) { //Const reference ensures no mods
     for (const Item& item : other.itemsInRoom) {
         this->itemsInRoom.push_back(Item(item)); //Item copy constructor
     }
