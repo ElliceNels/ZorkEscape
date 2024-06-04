@@ -10,7 +10,7 @@ protected:
     const string failedDoorAccess = "You cannot open this door";
     const string enterRoom = "You just entered a room";
     const string itemPickUp = "You just picked up an item";
-    const string placeholder = "";
+    const string victory = "You escaped!! Here are some lollipops. Click the correct one to exit";
     const string placeholder1 = "";
     const string placeholder2 = "";
     const string placeholder3 = "";
@@ -28,8 +28,8 @@ public:
         return itemPickUp;
     }
 
-    string getPlaceholder(){
-        return placeholder;
+    string getVictory(){
+        return victory;
     }
 
     string getPlaceholder1(){

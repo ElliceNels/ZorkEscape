@@ -4,6 +4,7 @@
 #include <QMainWindow>
 #include<QStackedWidget>
 #include<QListWidget>
+#include<QPushButton>
 #include <QLabel>
 #include "dialogue.h"
 #include "model.h"
@@ -28,9 +29,10 @@ public:
     void setLabelText(std::string text, QLabel *label);
     void changeRoom(int index,  QLabel *label1,  QLabel *label2);
     void addToItemToInventory(Item item);
-    void useItem(); //just remove from list but dont remove from inventory to keep access
 
 private slots:
+    void handleKeyClick(int room, int itemId, QPushButton* button);
+
     void on_continueButton_clicked();
     void on_PlayButton_clicked();
     void on_WUpButton_clicked();
@@ -42,21 +44,21 @@ private slots:
     void on_BDownButton_clicked();
     void on_SRightButton_clicked();
 
-    void on_UPKEY4_clicked();
+    // void on_UPKEY4_clicked();
 
-    void on_KEY1_clicked();
+    // void on_KEY1_clicked();
 
-    void on_LEFTKEY2_clicked();
+    // void on_LEFTKEY2_clicked();
 
-    void on_KEY7_clicked();
+    // void on_KEY7_clicked();
 
-    void on_KEY8_clicked();
+    // void on_KEY8_clicked();
 
-    void on_KEY5_clicked();
+    // void on_KEY5_clicked();
 
-    void on_KEY3_clicked();
+    // void on_KEY3_clicked();
 
-    void on_RIGHTKEY6_clicked();
+    // void on_RIGHTKEY6_clicked();
 
     void on_CLOSELOLLIPOP_clicked();
 

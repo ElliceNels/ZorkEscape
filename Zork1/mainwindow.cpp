@@ -2,12 +2,38 @@
 #include "ui_mainwindow.h"
 #include "room.h"
 #include "item.h"
-#include<iostream>
 extern Room *globRooms[6];
 
 MainWindow::MainWindow(QWidget *parent): QMainWindow(parent), ui(new Ui::MainWindow)
 {
     ui->setupUi(this);
+     connect(ui->KEY1, &QPushButton::clicked, [this]() { handleKeyClick(1, 1, ui->KEY1); });
+     connect(ui->LEFTKEY2, &QPushButton::clicked, [this]() { handleKeyClick(1, 2, ui->LEFTKEY2); });
+     connect(ui->KEY7, &QPushButton::clicked, [this]() { handleKeyClick(1, 7, ui->KEY7); });
+     connect(ui->KEY8, &QPushButton::clicked, [this]() { handleKeyClick(1, 8, ui->KEY8); });
+     connect(ui->KEY5, &QPushButton::clicked, [this]() { handleKeyClick(1, 5, ui->KEY5); });
+     connect(ui->KEY3, &QPushButton::clicked, [this]() { handleKeyClick(1, 3, ui->KEY3); });
+     connect(ui->UPKEY4, &QPushButton::clicked, [this]() { handleKeyClick(1, 4, ui->UPKEY4); });
+     connect(ui->RIGHTKEY6, &QPushButton::clicked, [this]() { handleKeyClick(1, 6, ui->RIGHTKEY6); });
+
+     connect(ui->STICK19, &QPushButton::clicked, [this]() { handleKeyClick(4, 19, ui->STICK19); });
+     connect(ui->STICK20, &QPushButton::clicked, [this]() { handleKeyClick(4, 20, ui->STICK20); });
+     connect(ui->STICK21, &QPushButton::clicked, [this]() { handleKeyClick(4, 21, ui->STICK21); });
+     connect(ui->STICK22, &QPushButton::clicked, [this]() { handleKeyClick(4, 22, ui->STICK22); });
+     connect(ui->STICK23, &QPushButton::clicked, [this]() { handleKeyClick(4, 23, ui->STICK23); });
+
+     connect(ui->BUTTON14, &QPushButton::clicked, [this]() { handleKeyClick(3, 14, ui->BUTTON14); });
+     connect(ui->BUTTON15, &QPushButton::clicked, [this]() { handleKeyClick(3, 15, ui->BUTTON15); });
+     connect(ui->BUTTON16, &QPushButton::clicked, [this]() { handleKeyClick(3, 16, ui->BUTTON16); });
+     connect(ui->BUTTON17, &QPushButton::clicked, [this]() { handleKeyClick(3, 17, ui->BUTTON17); });
+     connect(ui->BUTTON18, &QPushButton::clicked, [this]() { handleKeyClick(3, 18, ui->BUTTON18); });
+
+     connect(ui->KEYCARD9, &QPushButton::clicked, [this]() { handleKeyClick(2, 9, ui->KEYCARD9); });
+     connect(ui->KEYCARD10, &QPushButton::clicked, [this]() { handleKeyClick(2, 10, ui->KEYCARD10); });
+     connect(ui->KEYCARD11, &QPushButton::clicked, [this]() { handleKeyClick(2, 11, ui->KEYCARD11); });
+     connect(ui->KEYCARD12, &QPushButton::clicked, [this]() { handleKeyClick(2, 12, ui->KEYCARD12); });
+     connect(ui->KEYCARD13, &QPushButton::clicked, [this]() { handleKeyClick(2, 13, ui->KEYCARD13); });
+
     AllPages = ui->AllPages;
     AllPages->setCurrentIndex(0);
     ui->listWidget->hide();
@@ -27,6 +53,12 @@ void MainWindow::initiateGame(){
 
 }
 
+void MainWindow::handleKeyClick(int room, int itemId, QPushButton* button) {
+    Item item = globRooms[room]->findItemWithId(itemId);
+    button->hide();
+    addToItemToInventory(item);
+}
+
 void MainWindow::changeRoom(int index,  QLabel *label1,  QLabel *label2){
     AllPages->setCurrentIndex(index);
     setLabelText(globRooms[index -2]->printItemsInRoom(), label1);
@@ -42,10 +74,6 @@ void MainWindow::addToItemToInventory(Item item){
     mainCharacter.addToInventory(item);
     ui->listWidget->addItem(QString::fromStdString(item.getName() +" "+ to_string(item.getId())));
 }
-
-void MainWindow::useItem(){
-    // ui->listWidget->removeItemWidget(ui->listWidget->)
-    }//////////////////////////////////////////////////////////////////////////////////
 
 void MainWindow::roomCreation(){
 
@@ -103,7 +131,7 @@ void MainWindow::itemCreation(){
     globRooms[4]->addItemToRoom(*new Item(19, "Stick", "A small rod"));
     globRooms[4]->addItemToRoom(*new Item(20, "Stick", "Stick"));
     globRooms[4]->addItemToRoom(*new Item(21, "Stick", "A stick that looks kinda stuck"));
-    globRooms[4]->addItemToRoom(*new Item(21, "Stick", "A stick"));
+    globRooms[4]->addItemToRoom(*new Item(22, "Stick", "A stick"));
     globRooms[4]->addItemToRoom(*new Item(23, "Stick", "A big pole"));
 
     globRooms[5]->addItemToRoom(*new Item(24, "Lollipop", "A lollipop"));
@@ -117,7 +145,7 @@ void MainWindow::itemCreation(){
 // Things to happen to initiate game
 // - create rooms
 // - fill rooms with items
-// - set current room to room with id 3 (current room = globRooms[idWanted-1]) - may be unneccessary
+// - set current room to room with id 3 (current room = globRooms[idWanted-2]) - may be unneccessary
 // - create character
 // - Switch character location to current room
 
@@ -202,6 +230,7 @@ void MainWindow::on_KWDownButton_clicked()
 {
     if(1){
         changeRoom(7, ui->LDialogueLabel, ui->LItemsInRoom);
+        setLabelText(d.getVictory(), ui->LDialogueLabel);
     } else {
         setLabelText(d.getFailedDoorAccess(), ui->KWDialogueLabel);
     }
@@ -226,73 +255,6 @@ void MainWindow::on_SRightButton_clicked()
         setLabelText(d.getFailedDoorAccess(), ui->SDialogueLabel);
     }
 }
-
-
-void MainWindow::on_UPKEY4_clicked()
-{
-    Item item = globRooms[1]->findItemWithId(4);
-    ui->UPKEY4->hide();
-    addToItemToInventory(item);
-}
-
-
-
-
-void MainWindow::on_KEY1_clicked()
-{
-    Item item = globRooms[1]->findItemWithId(1);
-    ui->KEY1->hide();
-    addToItemToInventory(item);
-}
-
-
-void MainWindow::on_LEFTKEY2_clicked()
-{
-    Item item = globRooms[1]->findItemWithId(2);
-    ui->LEFTKEY2->hide();
-    addToItemToInventory(item);
-}
-
-
-void MainWindow::on_KEY7_clicked()
-{
-    Item item = globRooms[1]->findItemWithId(7);
-    ui->KEY7->hide();
-    addToItemToInventory(item);
-}
-
-
-void MainWindow::on_KEY8_clicked()
-{
-    Item item = globRooms[1]->findItemWithId(8);
-    ui->KEY8->hide();
-    addToItemToInventory(item);
-}
-
-
-void MainWindow::on_KEY5_clicked()
-{
-    Item item = globRooms[1]->findItemWithId(5);
-    ui->KEY5->hide();
-    addToItemToInventory(item);
-}
-
-
-void MainWindow::on_KEY3_clicked()
-{
-    Item item = globRooms[1]->findItemWithId(3);
-    ui->KEY3->hide();
-    addToItemToInventory(item);
-}
-
-
-void MainWindow::on_RIGHTKEY6_clicked()
-{
-    Item item = globRooms[1]->findItemWithId(6);
-    ui->RIGHTKEY6->hide();
-    addToItemToInventory(item);
-}
-
 
 void MainWindow::on_CLOSELOLLIPOP_clicked()
 {
