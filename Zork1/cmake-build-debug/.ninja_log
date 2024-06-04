@@ -1,0 +1,8 @@
+# ninja log v5
+32	198	7368771906674999	CMakeFiles/Zork1.dir/controller.cpp.obj	be6970cde6d818e2
+56	668	7368771911474912	CMakeFiles/Zork1.dir/inventory.cpp.obj	6c5dd80f8566acae
+4	116	7368773030315509	CMakeFiles/Zork1.dir/entity.cpp.obj	3cec33bea70783
+24	122	7368773030372910	CMakeFiles/Zork1.dir/character.cpp.obj	f28b1d1233783657
+21	664	7369030720547232	CMakeFiles/Zork1.dir/item.cpp.obj	55f1c660408689de
+46	333	7369030717213409	CMakeFiles/Zork1.dir/room.cpp.obj	8ddf3647877158ec
+104	1271	7375024004449868	CMakeFiles/Zork1.dir/entity.cpp.obj	3cec33bea70783
