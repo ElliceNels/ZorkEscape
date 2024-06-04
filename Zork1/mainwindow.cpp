@@ -179,7 +179,7 @@ void MainWindow::on_WUpButton_clicked()
 
 void MainWindow::on_KUpButton_clicked()
 {
-    if(mainCharacter.isInInventory(4)){
+    if(mainCharacter.isInInventory(11) ){
         changeRoom(5, ui->BDialogueLabel, ui->BItemsInRoom);
     } else {
         setLabelText(d.getFailedDoorAccess(), ui->KDialogueLabel);
@@ -189,7 +189,7 @@ void MainWindow::on_KUpButton_clicked()
 
 void MainWindow::on_KLeftButton_clicked()
 {
-    if(mainCharacter.isInInventory(2)){
+    if(mainCharacter.isInInventory(2) ||mainCharacter.isInInventory(11)){
         changeRoom(6, ui->SDialogueLabel, ui->SItemsInRoom);
     } else {
         setLabelText(d.getFailedDoorAccess(), ui->KDialogueLabel);
@@ -199,7 +199,7 @@ void MainWindow::on_KLeftButton_clicked()
 
 void MainWindow::on_KRightButton_clicked()
 {
-        if(mainCharacter.isInInventory(6)){
+        if(mainCharacter.isInInventory(23) || mainCharacter.isInInventory(11)){
         changeRoom(4, ui->KWDialogueLabel, ui->KWItemsInRoom);
     } else {
         setLabelText(d.getFailedDoorAccess(), ui->KDialogueLabel);
@@ -228,7 +228,7 @@ void MainWindow::on_KWLeftButton_clicked()
 
 void MainWindow::on_KWDownButton_clicked()
 {
-    if(1){
+    if(mainCharacter.isInInventory(17)|| mainCharacter.isInInventory(11)){
         changeRoom(7, ui->LDialogueLabel, ui->LItemsInRoom);
         setLabelText(d.getVictory(), ui->LDialogueLabel);
     } else {

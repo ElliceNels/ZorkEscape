@@ -2,6 +2,15 @@
 #include <iostream>
 #include "room.h"
 
+//Programmer definde exception -> when item isnt found in search
+class ItemNotFound : public exception {
+public:
+
+    const char * what() const throw(){
+        return "Item not found\n";
+    }
+};
+
  // INITIALISER LIST
  Room::Room(int roomId, string name, string description) : roomId(roomId){
     setName(name);
@@ -69,12 +78,29 @@ Room::Room(const Room& other) : Entity(other), roomId(other.roomId) {
         this->exits[exit.first] = new Room(*(exit.second));
     }
 }
+//BIT STRUCTURE
+struct BitBool {
+    unsigned int isTrue : 1; //uses one bit
+};
 
 Item Room::findItemWithId( int ID){
+    BitBool bitBool;
+    bitBool.isTrue = 0;
+
     for (Item item : getItemsInRoom()){
-        if (item.getId() == ID)
+        if (item.getId() == ID){
+             bitBool.isTrue = 1;
             return item;
-    };
+        }
+    }
+    try {
+        if (bitBool.isTrue == 0) {
+            ItemNotFound I;
+            throw I;
+        }
+    } catch (ItemNotFound e) {
+        std::cout << e.what();
+    }
 }
 
 
